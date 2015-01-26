@@ -15,20 +15,17 @@ Kevin Gargo
 
 }
 
-body {background-color: #FDFDFD; font-family:Hatori Hanzo, Hatori Hanzo Light; font-size: x-large
+body {background-color: #FDFDFD; font-family:Hatori Hanzo, Hatori Hanzo Light;
 
 }
 
-.normal{ font-size: medium
-    
-}
 
 /* 
 Menu Design
 Center the menu and sub-menu items
 */
     
-nav { text-align:center; 
+nav { text-align:center; font-size: xx-large
     
 }
 
@@ -129,21 +126,55 @@ Slideshow homepage
 
 }
 /* 
-Table style
+Table style - BY Joao
 */
-.table {border: 1px solid black; border-collapse: collapse;
+
+.innertitle{
+    font-size: 24px;
+    font-weight: bold;
+}
+#tableteamleftcol{
+    background-color: gold;
+    width: 300px;   
+    text-align: center;
+    font-size: 36px;
+    font-weight: bold;
+}
+#tableteam td{
+    padding: 0px 15px 0px 15px;
+}
+thead{
+    font-weight: bolder;
+    background-color: gold;
+}
+ul {
+    list-style-type:square;
+}
+
+#tableref{
+    border-spacing: 0px 0px;
+}
+
+#tableref td {
+    padding: 15px;
+    border: 1px solid black;
+}
+#tableref tbody tr:nth-child(even){
+    background-color: lightgray;
+}
+
+.table2 {border: 1px solid black; border-collapse: collapse;
 
 }
 
-th {color: white; background-color: black; font-size: large; padding: 0 1em 0 1em;
+.th2 {color: white; background-color: black; padding: 0 1em 0 1em; border: 1px solid black
     
 }
 
-.left {text-align: left; font-size: large
+.left {text-align: left; border: 1px solid black;
 
 }
 
-tr td {background-color: white; text-align: center; border: 1px solid black; width: 8em
+.tr2 .td2 {background-color: white; text-align: center; border: 1px solid black; width: 8em
     
 }
-
