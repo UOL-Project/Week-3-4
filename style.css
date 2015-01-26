@@ -19,8 +19,13 @@ body {background-color: #FDFDFD; font-family:Hatori Hanzo, Hatori Hanzo Light; f
 
 }
 
+.normal{ font-size: medium
+    
+}
+
 /* 
 Menu Design
+Center the menu and sub-menu items
 */
     
 nav { text-align:center; 
@@ -43,8 +48,6 @@ nav ul li:hover > ul {
         
 }
 
-
-
 nav ul {
     	padding: 0 20px;
 	list-style: none;
@@ -61,6 +64,10 @@ nav ul ul ul {
 
 nav ul ul {
 	position: absolute; top: 100%; right: 50% }
+
+/* 
+Menu Design structure of the menu and effects
+*/
 
 .bmenu ul li {
 	float: left;
@@ -94,6 +101,7 @@ nav ul ul {
     color: black;
 }
 
+
 /* 
 Slideshow homepage
 */
@@ -120,3 +128,22 @@ Slideshow homepage
     padding: 1em;
 
 }
+/* 
+Table style
+*/
+.table {border: 1px solid black; border-collapse: collapse;
+
+}
+
+th {color: white; background-color: black; font-size: large; padding: 0 1em 0 1em;
+    
+}
+
+.left {text-align: left; font-size: large
+
+}
+
+tr td {background-color: white; text-align: center; border: 1px solid black; width: 8em
+    
+}
+

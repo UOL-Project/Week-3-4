@@ -10,7 +10,11 @@
 Hide images other than the first (0) one.
  */
 
-function ParentMenu() {
-		document.documentElement.parentElement.setAttribute("class", "bmenu li a:hover");
-		}
+function UnFuzzy() {
+
+    var foo = document.getElementsByClassName("active")[0].parentNode;
+    
+
+}
+
 
