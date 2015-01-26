@@ -7,14 +7,17 @@
  */
 
 /* 
-Hide images other than the first (0) one.
+Use of title effect provided by https://github.com/jschr/textillate
  */
 
-function UnFuzzy() {
-
-    var foo = document.getElementsByClassName("active")[0].parentNode;
-    
-
-}
-
-
+$(function () {  
+    $('.tlt').textillate({  
+        in: {  
+            effect: 'flipInX',
+            shuffle: 'true'
+        },
+        out:{effect: 'bounceOutRight',
+        shuffle:'true'},
+    loop:'true'
+    });  
+})  
