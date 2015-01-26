@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<!--
+UOL - Programming the Internet - Group Project
+Week 3 - Assignment
+Fabien Huraux
+Joao Paulo Henriques Remedio  
+Kevin Gargo 
+-->
+<html>
+    <head>
+        <title>UOL - Make U'R shirt</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!--
+Link to external documents
+-->
+        <link rel ="stylesheet" type ="text/css" href="style.css">
+        <script type = "text/javascript" src="js/script.js"></script>
+ <!--
+JQuery is used for the slideshow part
+-->       
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
+    </head>
+    <body>
+        
+<!-- Definition of the dynamic menu using the HTML <nav> tag and CSS
+-->
+<div>
+    <nav class="bmenu">
+                    <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="shirts.html">Shirts</a>
+                                    <ul>
+                                                <li><a href="shirts.html#short">Short Sleeve</a></li>
+                                                <li><a href="shirts.html#long">Long Sleeve</a></li>
+                                    </ul>  
+                            </li>
+                            <li><a href="about.html">About us</a>
+                                    <ul>
+                                            <li><a href="about.html#team">The Team</a></li>
+                                            <li><a href="about.html#ref">References</a></li>
+                                    </ul>
+                            </li>
+                            <li><a href="contact.html">Contact us</a></li>
+                    </ul>
+            </nav>
+</div>
+<h2>Style Yourself</h2>
+<!--
+Slideshow
+-->
+        <div id="slideshow">
+             <div>
+             <img class="resize" src="./images/shirts.jpg" alt="shirts image">
+             </div>
+             <div>
+             <img class="resize" src="./images/shirt-iron.jpg" alt="example of shirt">
+             </div>
+            <div>
+             <img class="resize" src="./images/shirts.jpg" alt="shirts image">
+             </div>
+                    
+        </div> 
+<!--
+All items after the first one (0) have to be hidden. Jquery fadeout of 1500ms is applied before loading next div, then fadein. 
+Image is displayed during 5000ms
+-->
+<script>
+
+    $("#slideshow > div:gt(0)").hide();
+setInterval(function() { 
+  $('#slideshow > div:first')
+    .fadeOut(1500)
+    .next()
+    .fadeIn(1500)
+    .end()
+    .appendTo('#slideshow');
+},  5000);
+</script>
+    </body>
+</html>
