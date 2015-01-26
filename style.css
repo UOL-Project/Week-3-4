@@ -39,12 +39,11 @@ padding:0 30px;
 }
         
 nav ul ul {
-	display: none;
+	display: none; font-size: x-large;
 }
 
 nav ul li:hover > ul {
-	display: inline-table;
-        
+	display: inline-table
 }
 
 nav ul {
@@ -62,7 +61,7 @@ nav ul ul ul {
 }
 
 nav ul ul {
-	position: absolute; top: 100%; right: 50% }
+	position: absolute; top: 100%; right: 50%;}
 
 /* 
 Menu Design structure of the menu and effects
@@ -180,3 +179,4 @@ ul {
 .tr2 .td2 {background-color: white; text-align: center; border: 1px solid black; width: 8em
     
 }
+
