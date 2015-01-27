@@ -7,7 +7,13 @@
  */
 
 /* 
-Use of title effect provided by https://github.com/jschr/textillate
+Menu Design Fabien
+ */
+
+
+
+/* 
+Use of title effect provided by https://github.com/jschr/textillate Fabien
  */
 
 $(function () {  
