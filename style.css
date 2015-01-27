@@ -21,6 +21,7 @@ body {background-color: #FDFDFD; font-family:Hatori Hanzo, Hatori Hanzo Light;
 
 .tlt {text-align: center;}
 
+h2 {color: #3b5998}
 
 /* 
 Menu Design
@@ -135,7 +136,7 @@ Table style - BY Joao
     font-weight: bold;
 }
 #tableteamleftcol{
-    background-color: gold;
+    background-color: #dfe3ee;
     width: 300px;   
     text-align: center;
     font-size: 36px;
@@ -146,7 +147,7 @@ Table style - BY Joao
 }
 thead{
     font-weight: bolder;
-    background-color: gold;
+    background-color: #dfe3ee;
 }
 ul {
     list-style-type:square;
@@ -180,3 +181,22 @@ ul {
     
 }
 
+/* 
+Contact page form By Fabien
+*/
+
+.formbox { margin: 0 0 0 3em; box-shadow: 1em 1em 0.5em #888888
+
+}
+
+.formtxt { margin: 0 0 0 3em; box-shadow: 1em 1em 0.5em #888888; width: auto; height: auto
+
+}
+
+.leftdiv {font-size: large; float: left; width: auto; margin-top: 1.5em
+
+}
+
+.rightdiv {float: right; width: auto; margin: 5em 15em 0 0; border: 1em outset #dfe3ee
+
+}
