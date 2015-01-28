@@ -42,7 +42,7 @@ Kevin Gargo
 </div>
 <div>
             <h2>Make your own shirt</h2>
-            <p>select the type of shirt you are looking for (long or short sleeves), your logo and/or your text. Position them on your shirt and place your order.</p>
+            <p>select the type of shirt you are looking for (long or short sleeves), your logo and/or your text and place your order.</p>
 </div>
 <div class="leftdiv">
  <img src="images/t-shirt.png" id="imgcolour" alt="shirt selection" ondrop="drop(event)" ondragover="allowDrop(event)">
@@ -94,6 +94,9 @@ Kevin Gargo
         <p>Apply a logo ?</p>
         <input type="checkbox" name="logoyn" value="yes">Yes<br>
         <input type="checkbox" name="logoyn" value="no" checked="checked">No<br>
+        <br>
+        <div id="logosquare" ondrop="drop(event)" ondragover="allowDrop(event)">Drop here the logo</div>  
+        <br>
         <p>
         <input type="button" id="add2cart" value="Add to Cart" onclick="addtocart()"/>
         <input type="reset" value="Clear" />

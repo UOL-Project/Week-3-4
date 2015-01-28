@@ -200,15 +200,15 @@ Contact page form By Fabien
 
 }
 
-.leftdiv {font-size: large; float: left; width: auto; margin-top: 1.5em
-
+.leftdiv {font-size: large; float: left; width: auto; margin-top: 1.5em;
+   
 }
 
 .rightdiv {float: right; width: auto; margin: 5em 15em 0 0; border: 1em outset #dfe3ee
 
 }
 
-.rightdivform {float: right; width: auto; margin-right: 10em
+.rightdivform {float: right; width: 250px; margin-right: 10em
 
 }
 
@@ -238,4 +238,7 @@ input[type="number"] {text-align: right;
 
 #img6:hover{opacity: 0.4;
 
+}
+#logosquare{width: 300px; height: 300px; border: 1px solid black; text-align: center;
+    
 }
