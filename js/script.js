@@ -42,7 +42,8 @@ function drop(ev) {
         var data = ev.dataTransfer.getData("text");
         ev.target.appendChild(document.getElementById(data));
     }
-    /* Change the shirt type */
+    
+    /* Change the shirt type by Joao & Fabien */
 
 function shirtype() {
     switch (document.getElementById("shirtmodel").value) {
@@ -122,7 +123,9 @@ function shirtcolour() {
     } /*else*/
 
 
-} /*function shirtcolour*/
+}
+
+/*function addtocart by Joaor*/
 
 function addtocart() {
     alert("Your request was sucessfully processed");

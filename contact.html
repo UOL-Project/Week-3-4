@@ -7,60 +7,72 @@ Joao Paulo Henriques Remedio
 Kevin Gargo 
 -->
 <html>
-    <head>
-        <title>UOL - Make U'R shirt - Contact</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="UOL Project Week 3-4 Groupe 4, contact page">
-        <link rel ="stylesheet" type ="text/css" href="style.css">
-        <link rel="stylesheet" href="js/animate.css" type="text/css"/>
 
-        <script type = "text/javascript" src="js/script.js"></script>
-    </head>
-    <body> 
-        <div>   
-            <nav class="bmenu">
+<head>
+    <title>UOL - Make U'R shirt - Contact</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="UOL Project Week 3-4 Groupe 4, contact page">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="js/animate.css" type="text/css" />
+
+    <script type="text/javascript" src="js/script.js"></script>
+</head>
+
+<body>
+    <div>
+        <nav class="bmenu">
+            <ul>
+                <li><a href="index.html">Home</a>
+                </li>
+                <li id="shirts"><a href="shirts.html">Shirts</a>
                     <ul>
-                            <li><a href="index.html">Home</a></li>
-                            <li id="shirts"><a href="shirts.html">Shirts</a>
-                                    <ul>
-                                                <li><a href="mshirts.html">Men</a></li>
-                                                <li><a href="wshirts.html">Women</a></li>
-                                    </ul>  
-                            </li>
-                            <li><a href="about.html">About us</a>
-                                    <ul>
-                                            <li><a href="about.html#team">The Team</a></li>
-                                            <li><a href="about.html#ref">References</a></li>
-                                            <li><a href="about.html#assign">Work Assignment</a></li>
-                                    </ul>
-                            </li>
-                            <li><a href="contact.html">Contact us</a></li>
+                        <li><a href="mshirts.html">Men</a>
+                        </li>
+                        <li><a href="wshirts.html">Women</a>
+                        </li>
                     </ul>
-            </nav></div>
-        <div class="leftdiv">
-            <h2>Want's to leave us a message ?</h2>
-            <p>feel in the following form, and don't forget to leave us your email:</p>
-            <form>
-                <ul>
-                    <li>Having a customer ID ?</li>
-                </ul>
-                <input type='text' class='formbox' id='customerid' placeholder="ID" name="Customer ID" size='8'> 
-                 <ul>
-                    <li>Leave us your message:</li>
-                </ul>
-                <textarea class='formtxt' id='txtmsg' placeholder="I love your site" name="TextMsg"></textarea>
-                <ul>
-                    <li>an email for us to reply ?</li>
-                </ul>
-                <input type='email' class='formbox' id='email' placeholder="toto@toto.com" name="email"> 
-                <br><br>
-                <input type="submit">
-                <input type="reset">
-            </form>
-        </div>
-        <div class="rightdiv">
-            <img src='images/Internet_is_Full.jpg' alt='Internet is full'>
-        </div>
-    </body>
+                </li>
+                <li><a href="about.html">About us</a>
+                    <ul>
+                        <li><a href="about.html#team">The Team</a>
+                        </li>
+                        <li><a href="about.html#ref">References</a>
+                        </li>
+                        <li><a href="about.html#assign">Work Assignment</a>
+                        </li>
+                    </ul>
+                </li>
+                <li><a href="contact.html">Contact us</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+    <div class="leftdiv">
+        <h2>Want's to leave us a message ?</h2>
+        <p>feel in the following form, and don't forget to leave us your email:</p>
+        <form>
+            <ul>
+                <li>Having a customer ID ?</li>
+            </ul>
+            <input type='text' class='formbox' id='customerid' placeholder="ID" name="Customer ID" size='8'>
+            <ul>
+                <li>Leave us your message:</li>
+            </ul>
+            <textarea class='formtxt' id='txtmsg' placeholder="I love your site" name="TextMsg"></textarea>
+            <ul>
+                <li>an email for us to reply ?</li>
+            </ul>
+            <input type='email' class='formbox' id='email' placeholder="toto@toto.com" name="email" required="required">
+            <br>
+            <br>
+            <input type="submit">
+            <input type="reset">
+        </form>
+    </div>
+    <div class="rightdiv">
+        <img src='images/Internet_is_Full.jpg' alt='Internet is full'>
+    </div>
+</body>
+
 </html>
