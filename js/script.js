@@ -116,11 +116,14 @@ if (type === "short") {
             break;
         default:
             document.getElementById("imgcolour").src = "images/hoodies.png";
-    }
+    } /*switch*/  
         
-}
-function submit(){
-    window.alert("Your request was sucessfully processed");
+}/*else*/
+
+
+}/*function shirtcolour*/
+
+function addtocart(){
+    alert("Your request was sucessfully processed");
 }
 
-}

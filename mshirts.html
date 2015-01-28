@@ -64,7 +64,15 @@ Kevin Gargo
             <option value="yellow">Yellow</option>
             <option value="pink">Pink</option>
             <option value="orange">Orange</option>
-        </select> 
+        </select>
+        <p>Select the size:</p>
+        <select id="shirtsize">
+            <option value="s">S</option>
+            <option value="m">M</option>
+            <option value="l">L</option>
+            <option value="xl">XL</option>
+            <option value="xxl">XXL</option>
+        </select>
         <p>Quantity:</p>
         <input type="number" name="quantity" min="1" max="10" value="1">
         <p>Type  your text (max 50 characters)</p>
@@ -73,24 +81,32 @@ Kevin Gargo
         <input type="checkbox" name="txtpos" value="front">Front<br>
         <input type="checkbox" name="txtpos" value="back" checked="checked">Back<br>
         <p>Select your text color:</p>
-        <select id="textcolor">
-                    <option>Black</option>
-                    <option>White</option>
-                    <option>Blue</option>
-                    <option>Green</option>
-                    <option>Red</option>
-                    <option>Yellow</option>
-                    <option>Pink</option>
-                    <option>Orange</option>
+       <select id="textcolor">
+            <option value="black">Black</option>
+            <option value="white">White</option>
+            <option value="blue">Blue</option>
+            <option value="green">Green</option>
+            <option value="red">Red</option>
+            <option value="yellow">Yellow</option>
+            <option value="pink">Pink</option>
+            <option value="orange">Orange</option>
         </select> 
-                <p>Apply a logo ?</p>
-                <input type="checkbox" name="logoyn" value="yes">Yes<br>
-                <input type="checkbox" name="logoyn" value="no" checked="checked">No<br>
-                <p>
-                <input type="button" id="add2cart" value="Add to Cart" onclick="addtocart()"/>
-                <input type="reset" value="Clear" />
-                </p>
+        <p>Apply a logo ?</p>
+        <input type="checkbox" name="logoyn" value="yes">Yes<br>
+        <input type="checkbox" name="logoyn" value="no" checked="checked">No<br>
+        <p>
+        <input type="button" id="add2cart" value="Add to Cart" onclick="addtocart()"/>
+        <input type="reset" value="Clear" />
+        </p>
     </form>
 </div>
+    <div>
+        <img src="images/aliwal_north.png" id="img1" alt="aliwal north" draggable="true" ondragstart="drag(event)" />
+        <img src="images/anti-globalization.jpg" id="img2" alt="Anti-Globalization" draggable="true" ondragstart="drag(event)" />
+        <img src="images/did.jpg" id="img3" alt="Did" draggable="true" ondragstart="drag(event)" />
+        <img src="images/hopp_schwiiz.jpg" id="img4" alt="Hopp Schwiiz" draggable="true" ondragstart="drag(event)" />
+        <img src="images/iceberg.jpg" id="img5" alt="Iceberg" draggable="true" ondragstart="drag(event)" />
+        <img src="images/jack_daniels.jpg" id="img6" alt="Jack Daniels" draggable="true" ondragstart="drag(event)" />
+    </div>
     </body>
 </html>
