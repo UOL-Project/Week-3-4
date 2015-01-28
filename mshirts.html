@@ -7,102 +7,115 @@ Joao Paulo Henriques Remedio
 Kevin Gargo 
 -->
 <html>
-    <head>
-        <title>UOL - Make U'R shirt - Make-it</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="UOL Project Week 3-4 Groupe 4, shirt page">
-        <script type = "text/javascript" src="js/script.js"></script>
-        <link rel ="stylesheet" type ="text/css" href="style.css">
-    </head>
-    <body>
-                
-<!-- Definition of the dynamic menu using the HTML <nav> tag and CSS
+
+<head>
+    <title>UOL - Make U'R shirt - Make-it</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="UOL Project Week 3-4 Groupe 4, shirt page">
+    <script type="text/javascript" src="js/script.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+
+    <!-- Definition of the dynamic menu using the HTML <nav> tag and CSS
 -->
-<div>
-    <nav class="bmenu">
+    <div>
+        <nav class="bmenu">
+            <ul>
+                <li><a href="index.html">Home</a>
+                </li>
+                <li id="shirts"><a href="shirts.html">Shirts</a>
                     <ul>
-                            <li><a href="index.html">Home</a></li>
-                            <li id="shirts"><a href="shirts.html">Shirts</a>
-                                    <ul>
-                                                <li><a href="mshirts.html">Men</a></li>
-                                                <li><a href="wshirts.html">Women</a></li>
-                                    </ul>  
-                            </li>
-                            <li><a href="about.html">About us</a>
-                                    <ul>
-                                            <li><a href="about.html#team">The Team</a></li>
-                                            <li><a href="about.html#ref">References</a></li>
-                                            <li><a href="about.html#assign">Work Assignment</a></li>
-                                    </ul>
-                            </li>
-                            <li><a href="contact.html">Contact us</a></li>
+                        <li><a href="mshirts.html">Men</a>
+                        </li>
+                        <li><a href="wshirts.html">Women</a>
+                        </li>
                     </ul>
-            </nav>
-</div>
-<div>
-            <h2>Make your own shirt</h2>
-            <p>select the type of shirt you are looking for (long or short sleeves), your logo and/or your text and place your order.</p>
-</div>
-<div class="leftdiv">
- <img src="images/t-shirt.png" id="imgcolour" alt="shirt selection" ondrop="drop(event)" ondragover="allowDrop(event)">
-</div>
-<div class="rightdivform">
-    <form>
-        <p>Select your shirt type</p>
-        <select id="shirtmodel" onchange="shirtype()">
-                    <option value="short">Short Sleeve</option>
-                    <option value="long">Long Sleeve</option>
-        </select> 
-        <p>Select your shirt color:</p>
-        <select id="color" onchange="shirtcolour()">
-            <option value="white">White</option>
-            <option value="black">Black</option>
-            <option value="blue">Blue</option>
-            <option value="green">Green</option>
-            <option value="red">Red</option>
-            <option value="yellow">Yellow</option>
-            <option value="pink">Pink</option>
-            <option value="orange">Orange</option>
-        </select>
-        <p>Select the size:</p>
-        <select id="shirtsize">
-            <option value="s">S</option>
-            <option value="m">M</option>
-            <option value="l">L</option>
-            <option value="xl">XL</option>
-            <option value="xxl">XXL</option>
-        </select>
-        <p>Quantity:</p>
-        <input type="number" name="quantity" min="1" max="10" value="1">
-        <p>Type  your text (max 50 characters)</p>
-        <textarea id='txtshirt' name="TextShirt" maxlength="50"></textarea>
-        <p>Text position ?</p>
-        <input type="checkbox" name="txtpos" value="front">Front<br>
-        <input type="checkbox" name="txtpos" value="back" checked="checked">Back<br>
-        <p>Select your text color:</p>
-       <select id="textcolor">
-            <option value="black">Black</option>
-            <option value="white">White</option>
-            <option value="blue">Blue</option>
-            <option value="green">Green</option>
-            <option value="red">Red</option>
-            <option value="yellow">Yellow</option>
-            <option value="pink">Pink</option>
-            <option value="orange">Orange</option>
-        </select> 
-        <p>Apply a logo ?</p>
-        <input type="checkbox" name="logoyn" value="yes">Yes<br>
-        <input type="checkbox" name="logoyn" value="no" checked="checked">No<br>
-        <br>
-        <div id="logosquare" ondrop="drop(event)" ondragover="allowDrop(event)">Drop here the logo</div>  
-        <br>
-        <p>
-        <input type="button" id="add2cart" value="Add to Cart" onclick="addtocart()"/>
-        <input type="reset" value="Clear" />
-        </p>
-    </form>
-</div>
+                </li>
+                <li><a href="about.html">About us</a>
+                    <ul>
+                        <li><a href="about.html#team">The Team</a>
+                        </li>
+                        <li><a href="about.html#ref">References</a>
+                        </li>
+                        <li><a href="about.html#assign">Work Assignment</a>
+                        </li>
+                    </ul>
+                </li>
+                <li><a href="contact.html">Contact us</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+    <div>
+        <h2>Make your own shirt</h2>
+        <p>select the type of shirt you are looking for (long or short sleeves), your logo and/or your text and place your order.</p>
+    </div>
+    <div class="leftdiv">
+        <img src="images/t-shirt.png" id="imgcolour" alt="shirt selection" ondrop="drop(event)" ondragover="allowDrop(event)">
+    </div>
+    <div class="rightdivform">
+        <form>
+            <p>Select your shirt type</p>
+            <select id="shirtmodel" onchange="shirtype()">
+                <option value="short">Short Sleeve</option>
+                <option value="long">Long Sleeve</option>
+            </select>
+            <p>Select your shirt color:</p>
+            <select id="color" onchange="shirtcolour()">
+                <option value="white">White</option>
+                <option value="black">Black</option>
+                <option value="blue">Blue</option>
+                <option value="green">Green</option>
+                <option value="red">Red</option>
+                <option value="yellow">Yellow</option>
+                <option value="pink">Pink</option>
+                <option value="orange">Orange</option>
+            </select>
+            <p>Select the size:</p>
+            <select id="shirtsize">
+                <option value="s">S</option>
+                <option value="m">M</option>
+                <option value="l">L</option>
+                <option value="xl">XL</option>
+                <option value="xxl">XXL</option>
+            </select>
+            <p>Quantity:</p>
+            <input type="number" name="quantity" min="1" max="10" value="1">
+            <p>Type your text (max 50 characters)</p>
+            <textarea id='txtshirt' name="TextShirt" maxlength="50"></textarea>
+            <p>Text position ?</p>
+            <input type="checkbox" name="txtpos" value="front">Front
+            <br>
+            <input type="checkbox" name="txtpos" value="back" checked="checked">Back
+            <br>
+            <p>Select your text color:</p>
+            <select id="textcolor">
+                <option value="black">Black</option>
+                <option value="white">White</option>
+                <option value="blue">Blue</option>
+                <option value="green">Green</option>
+                <option value="red">Red</option>
+                <option value="yellow">Yellow</option>
+                <option value="pink">Pink</option>
+                <option value="orange">Orange</option>
+            </select>
+            <p>Apply a logo ?</p>
+            <input type="checkbox" name="logoyn" value="yes">Yes
+            <br>
+            <input type="checkbox" name="logoyn" value="no" checked="checked">No
+            <br>
+            <br>
+            <div id="logosquare" ondrop="drop(event)" ondragover="allowDrop(event)">Drop here the logo</div>
+            <br>
+            <p>
+                <input type="button" id="add2cart" value="Add to Cart" onclick="addtocart()" />
+                <input type="reset" value="Clear" />
+            </p>
+        </form>
+    </div>
     <div>
         <img src="images/aliwal_north.png" id="img1" alt="aliwal north" draggable="true" ondragstart="drag(event)" />
         <img src="images/anti-globalization.jpg" id="img2" alt="Anti-Globalization" draggable="true" ondragstart="drag(event)" />
@@ -111,5 +124,6 @@ Kevin Gargo
         <img src="images/iceberg.jpg" id="img5" alt="Iceberg" draggable="true" ondragstart="drag(event)" />
         <img src="images/jack_daniels.jpg" id="img6" alt="Jack Daniels" draggable="true" ondragstart="drag(event)" />
     </div>
-    </body>
+</body>
+
 </html>

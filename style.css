@@ -10,72 +10,80 @@ Kevin Gargo
     Author     : fabienhuraux
 */
 
-@font-face {font-family: Hatori Hanzo Light; src:url(../Hattori_Hanzo-webfont.eot) format("embedded-opentype"); src:url(../Hattori_Hanzo-webfont.woff) format("woff"); 
-            src:url(../Hattori_Hanzo-webfont.svg) format("svg")
-
+@font-face {
+    font-family: Hatori Hanzo Light;
+    src: url(../Hattori_Hanzo-webfont.eot) format("embedded-opentype");
+    src: url(../Hattori_Hanzo-webfont.woff) format("woff");
+    src: url(../Hattori_Hanzo-webfont.svg) format("svg")
 }
 
-body {background-color: #f7f7f7; font-family:Hatori Hanzo, Hatori Hanzo Light;
-
+body {
+    background-color: #f7f7f7;
+    font-family: Hatori Hanzo, Hatori Hanzo Light;
 }
 
-.tlt {text-align: center;}
+.tlt {
+    text-align: center;
+}
 
-h2 {color: #3b5998}
-
+h2 {
+    color: #3b5998
+}
 /* 
 Menu Design
 Center the menu and sub-menu items
 */
-    
-nav { text-align:center; font-size: xx-large
-    
+
+nav {
+    text-align: center;
+    font-size: xx-large
 }
 
 nav a {
-float:left;
-text-decoration:none; 
-padding:0 30px; 
-
+    float: left;
+    text-decoration: none;
+    padding: 0 30px;
 }
-        
+
 nav ul ul {
-	display: none; font-size: x-large;
+    display: none;
+    font-size: x-large;
 }
 
 nav ul li:hover > ul {
-	display: inline-table
+    display: inline-table
 }
 
 nav ul {
-    	padding: 0 20px;
-	list-style: none;
-	position: relative;
-	display: inline-table;
-}
-nav ul:after {
-	content: ""; clear: both; display: block;
+    padding: 0 20px;
+    list-style: none;
+    position: relative;
+    display: inline-table;
 }
 
-nav ul ul ul {
-	position: absolute; left: 100% ; top:0;
+nav ul:after {
+    content: "";
+    clear: both;
+    display: block;
 }
 
 nav ul ul {
-	position: absolute; top: 100%; right: 50%;}
-
+    position: absolute;
+    top: 100%;
+    right: 50%;
+}
 /* 
 Menu Design structure of the menu and effects
 */
 
 .bmenu ul li {
-	float: left;
+    float: left;
 }
-    
-.bmenu li a{
+
+.bmenu li a {
     white-space: nowrap;
     text-transform: uppercase;
-    text-shadow: 1px 1px 2px rgba(255,255,255,0.3);
+    text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.3);
     color: #8b9dc3;
     padding: 5px 20px;
     margin: 2px;
@@ -89,73 +97,73 @@ Menu Design structure of the menu and effects
     background: transparent;
 }
 
-.bmenu:hover li a{
+.bmenu:hover li a {
     text-shadow: 0px 0px 10px #8b9dc3;
     color: transparent;
-    
 }
 
-.bmenu li a:hover{
+.bmenu li a:hover {
     background: transparent;
-    text-shadow: 1px 1px 10px rgba(255,255,255,0.6);
+    text-shadow: 1px 1px 10px rgba(255, 255, 255, 0.6);
     color: #3b5998;
 }
-
-
 /* 
 Slideshow homepage
 */
 
-#slideshow { 
-    margin: 5em auto; 
-    position: relative; 
-    width: 30em; 
-    height: 30em; 
-    padding: 1em; 
-    box-shadow: 0 0 0.5em rgba(0,0,0,0.4); 
+#slideshow {
+    margin: 5em auto;
+    position: relative;
+    width: 30em;
+    height: 30em;
+    padding: 1em;
+    box-shadow: 0 0 0.5em rgba(0, 0, 0, 0.4);
 }
 
-#slideshow > div { 
-    position: absolute; 
-    top: 1em; 
-    left: 1em; 
-    right: 1em; 
-    bottom: 1em; 
+#slideshow > div {
+    position: absolute;
+    top: 1em;
+    left: 1em;
+    right: 1em;
+    bottom: 1em;
 }
 
-.resize {  
+.resize {
     width: 28em;
     padding: 1em;
-
 }
 /* 
 Table style - BY Joao
 */
 
-.innertitle{
+.innertitle {
     font-size: 24px;
     font-weight: bold;
     color: #3b5998
 }
-#tableteamleftcol{
+
+#tableteamleftcol {
     background-color: #dfe3ee;
-    width: 300px;   
+    width: 300px;
     text-align: center;
     font-size: 36px;
     font-weight: bold;
 }
-#tableteam td{
+
+#tableteam td {
     padding: 0px 15px 0px 15px;
 }
-thead{
+
+thead {
     font-weight: bolder;
     background-color: #dfe3ee;
 }
+
 ul {
-    list-style-type:square;
+    list-style-type: square;
 }
 
-#tableref{
+#tableref {
     border-spacing: 0px 0px;
 }
 
@@ -163,82 +171,107 @@ ul {
     padding: 15px;
     border: 1px solid black;
 }
-#tableref tbody tr:nth-child(even){
+
+#tableref tbody tr:nth-child(even) {
     background-color: lightgray;
 }
 
-.table2 {border: 1px solid black; border-collapse: collapse;
-
+.table2 {
+    border: 1px solid black;
+    border-collapse: collapse;
 }
 
-.th2 {color: #3b5998; background-color: #dfe3ee; padding: 1em; border: 1px solid black
-    
+.th2 {
+    color: #3b5998;
+    background-color: #dfe3ee;
+    padding: 1em;
+    border: 1px solid black
 }
 
-.left {text-align: left; border: 1px solid black; padding-left: 1em
-
+.left {
+    text-align: left;
+    border: 1px solid black;
+    padding-left: 1em
 }
 
-.tr2 .td2 {background-color: white; text-align: center; border: 1px solid black; width: 8em; padding: 1em
-    
+.tr2 .td2 {
+    background-color: white;
+    text-align: center;
+    border: 1px solid black;
+    width: 8em;
+    padding: 1em
 }
 
-.fontcolor { color: #3b5998
-
+.fontcolor {
+    color: #3b5998
 }
-
-
 /* 
 Contact page form By Fabien
 */
 
-.formbox { margin: 0 0 0 3em; box-shadow: 1em 1em 0.5em #888888
-
+.formbox {
+    margin: 0 0 0 3em;
+    box-shadow: 1em 1em 0.5em #888888
 }
 
-.formtxt { margin: 0 0 0 3em; box-shadow: 1em 1em 0.5em #888888; width: auto; height: auto
-
+.formtxt {
+    margin: 0 0 0 3em;
+    box-shadow: 1em 1em 0.5em #888888;
+    width: auto;
+    height: auto
 }
 
-.leftdiv {font-size: large; float: left; width: auto; margin-top: 1.5em;
-   
+.leftdiv {
+    font-size: large;
+    float: left;
+    width: auto;
+    margin-top: 1.5em;
 }
 
-.rightdiv {float: right; width: auto; margin: 5em 15em 0 0; border: 1em outset #dfe3ee
-
+.rightdiv {
+    float: right;
+    width: auto;
+    margin: 5em 15em 0 0;
+    border: 1em outset #dfe3ee
 }
 
-.rightdivform {float: right; width: 250px; margin-right: 10em
-
+.rightdivform {
+    float: right;
+    width: 250px;
+    margin-right: 10em
 }
 
-input[type="number"] {text-align: right;
-
+input[type="number"] {
+    text-align: right;
 }
 
-#img1:hover{opacity: 0.4;
-
+#img1:hover {
+    opacity: 0.4;
 }
 
-#img2:hover{opacity: 0.4;
-
+#img2:hover {
+    opacity: 0.4;
 }
 
-#img3:hover{opacity: 0.4;
-
+#img3:hover {
+    opacity: 0.4;
 }
 
-#img4:hover{opacity: 0.4;
-
+#img4:hover {
+    opacity: 0.4;
 }
 
-#img5:hover{opacity: 0.4;
-
+#img5:hover {
+    opacity: 0.4;
 }
 
-#img6:hover{opacity: 0.4;
-
+#img6:hover {
+    opacity: 0.4;
 }
-#logosquare{width: 300px; height: 300px; border: 1px solid black; text-align: center;
-    
+
+#logosquare {
+    width: 300px;
+    height: 300px;
+    border: 1px solid black;
+    text-align: center;
 }

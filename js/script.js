@@ -2,8 +2,8 @@
  * UOL - Programming the Internet - Group Project
  * Week 3 - Assignment
  * Fabien Huraux
- * Joao Paulo Henriques Remedio  
- * Kevin Gargo 
+ * Joao Paulo Henriques Remedio
+ * Kevin Gargo
  */
 
 /* 
@@ -16,50 +16,52 @@ Menu Design Fabien
 Use of title effect provided by https://github.com/jschr/textillate Fabien
  */
 
-$(function () {  
-    $('.tlt').textillate({  
-        in: {  
+$(function () {
+    $('.tlt').textillate({ in : {
             effect: 'flipInX',
             shuffle: 'true'
         },
-        out:{effect: 'bounceOutRight',
-        shuffle:'true'},
-    loop:'true'
-    });  
-}) 
-;
+        out: {
+                effect: 'bounceOutRight',
+                shuffle: 'true'
+            },
+            loop: 'true'
+    });
+});
 /* drag and drop functions */
 function allowDrop(ev) {
     ev.preventDefault();
 }
+
 function drag(ev) {
     ev.dataTransfer.setData("text", ev.target.id);
 }
-function drop(ev) {
-    ev.preventDefault();
-    var data = ev.dataTransfer.getData("text");
-    ev.target.appendChild(document.getElementById(data));
-}
-/* Change the shirt type */
 
-function shirtype(){
-switch (document.getElementById("shirtmodel").value){
+function drop(ev) {
+        ev.preventDefault();
+        var data = ev.dataTransfer.getData("text");
+        ev.target.appendChild(document.getElementById(data));
+    }
+    /* Change the shirt type */
+
+function shirtype() {
+    switch (document.getElementById("shirtmodel").value) {
     case "short":
-            document.getElementById("imgcolour").src = "images/t-shirt.png";
-            break;
+        document.getElementById("imgcolour").src = "images/t-shirt.png";
+        break;
     case "long":
-            document.getElementById("imgcolour").src = "images/hoodies.png";
-            break;
-}
+        document.getElementById("imgcolour").src = "images/hoodies.png";
+        break;
+    }
 }
 
 
 /* change the shirt colour by Joao & Fabien */
-function shirtcolour(){
+function shirtcolour() {
 
-var type = document.getElementById("shirtmodel").value;
-if (type === "short") {
-    switch (document.getElementById("color").value){
+    var type = document.getElementById("shirtmodel").value;
+    if (type === "short") {
+        switch (document.getElementById("color").value) {
         case "white":
             document.getElementById("imgcolour").src = "images/t-shirt.png";
             break;
@@ -86,10 +88,9 @@ if (type === "short") {
             break;
         default:
             document.getElementById("imgcolour").src = "images/t-shirt.png";
-    }
-}
-    else{
-            switch (document.getElementById("color").value){
+        }
+    } else {
+        switch (document.getElementById("color").value) {
         case "white":
             document.getElementById("imgcolour").src = "images/hoodies.png";
             break;
@@ -116,14 +117,13 @@ if (type === "short") {
             break;
         default:
             document.getElementById("imgcolour").src = "images/hoodies.png";
-    } /*switch*/  
-        
-}/*else*/
+        } /*switch*/
+
+    } /*else*/
 
 
-}/*function shirtcolour*/
+} /*function shirtcolour*/
 
-function addtocart(){
+function addtocart() {
     alert("Your request was sucessfully processed");
 }
-
