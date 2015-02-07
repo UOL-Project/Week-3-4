@@ -6,11 +6,6 @@
  * Kevin Gargo
  */
 
-/* 
-Menu Design Fabien
- */
-
-
 
 /* 
 Use of title effect provided by https://github.com/jschr/textillate Fabien
@@ -27,7 +22,9 @@ $(function () {
             },
             loop: 'true'
     });
+event.stopPropagation();
 });
+
 /* drag and drop functions */
 function allowDrop(ev) {
     ev.preventDefault();
@@ -129,4 +126,4 @@ function shirtcolour() {
 
 function addtocart() {
     alert("Your request was sucessfully processed");
-}
+};

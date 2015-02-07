@@ -15,7 +15,7 @@ Kevin Gargo
     <!--
 Link to external documents
 -->
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
     <script type="text/javascript" src="js/script.js"></script>
 </head>
 
@@ -23,32 +23,17 @@ Link to external documents
     <div>
         <!-- Definition of the dynamic menu using the HTML <nav> tag and CSS
     Created by Fabien -->
-        <nav class="bmenu">
-            <ul>
-                <li><a href="index.html">Home</a>
-                </li>
-                <li id="shirts"><a href="shirts.html">Shirts</a>
-                    <ul>
-                        <li><a href="mshirts.html">Men</a>
-                        </li>
-                        <li><a href="wshirts.html">Women</a>
-                        </li>
-                    </ul>
-                </li>
-                <li><a href="about.html">About us</a>
-                    <ul>
-                        <li><a href="about.html#team">The Team</a>
-                        </li>
-                        <li><a href="about.html#ref">References</a>
-                        </li>
-                        <li><a href="about.html#assign">Work Assignment</a>
-                        </li>
-                    </ul>
-                </li>
-                <li><a href="contact.html">Contact us</a>
-                </li>
-            </ul>
-        </nav>
+<div tabindex="0" class="onclick-menu"><img src="images/Menu-Icon-6.png" alt="menu item" class="menuimg">
+    <nav class="onclick-menu-content">
+        <ul>
+            <li><a href="index.html" class="menu">Home</a></li>
+            <li><a href="mshirts.html" class="menu">Men Shirts</a></li>
+            <li><a href="wshirts.html" class="menu">Women Shirts</a></li>
+            <li><a href="about.html" class="menu">About Us</a></li>
+            <li><a href="contact.html" class="menu">Contact</a></li>
+        </ul>
+    </nav>
+</div>
     </div>
     <!-- Page info and references By Joao
 -->

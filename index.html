@@ -16,55 +16,44 @@ Kevin Gargo
     <!--
 Link to external documents
 -->
-    <link rel="stylesheet" type="text/css" href="style.css">
-    <link rel="stylesheet" type="text/css" href="js/animate.css">
+<link rel="stylesheet" type="text/css" href="css/style.css" title="defaultcss">    
+<link rel="stylesheet" type="text/css" href="css/animate.css">
+
     <!--
 JQuery is used for the slideshow and animated title part
 -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-    <script type="text/javascript" src="js/jquery.textillate.js"></script>
-    <script type="text/javascript" src="js/jquery.lettering.js"></script>
-    <script type="text/javascript" src="js/script.js"></script>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>        
+        <script type="text/javascript" src="js/script.js"></script>
+        <script type="text/javascript" src="js/jquery.textillate.js"></script>
+        <script type="text/javascript" src="js/jquery.lettering.js"></script>
+
 </head>
 
 <body>
 
     <!-- Definition of the dynamic menu using the HTML <nav> tag and CSS
 -->
-    <div>
-        <nav class="bmenu">
-            <ul>
-                <li><a href="index.html">Home</a>
-                </li>
-                <li id="shirts"><a href="shirts.html">Shirts</a>
-                    <ul>
-                        <li><a href="mshirts.html">Men</a>
-                        </li>
-                        <li><a href="wshirts.html">Women</a>
-                        </li>
-                    </ul>
-                </li>
-                <li><a href="about.html">About us</a>
-                    <ul>
-                        <li><a href="about.html#team">The Team</a>
-                        </li>
-                        <li><a href="about.html#ref">References</a>
-                        </li>
-                        <li><a href="about.html#assign">Work Assignment</a>
-                        </li>
-                    </ul>
-                </li>
-                <li><a href="contact.html">Contact us</a>
-                </li>
-            </ul>
-        </nav>
-    </div>
+
+<div tabindex="0" class="onclick-menu"><img src="images/Menu-Icon-6.png" alt="menu item" class="menuimg">
+    <nav class="onclick-menu-content">
+        <ul>
+            <li><a href="index.html" class="menu">Home</a></li>
+            <li><a href="mshirts.html" class="menu">Men Shirts</a></li>
+            <li><a href="wshirts.html" class="menu">Women Shirts</a></li>
+            <li><a href="about.html" class="menu">About Us</a></li>
+            <li><a href="contact.html" class="menu">Contact</a></li>
+        </ul>
+    </nav>
+</div>
+
+    <br>
     <br>
     <h2 class="tlt">Style Yourself.     Let your imagination at play,     and build your own shirt.</h2>
     <!--
 Slideshow
 -->
-    <div id="slideshow">
+<div id="slideshow">
         <div>
             <img class="resize" src="./images/shirts.jpg" alt="shirts image">
         </div>
@@ -74,14 +63,10 @@ Slideshow
         <div>
             <img class="resize" src="./images/shirts.jpg" alt="shirts image">
         </div>
-
     </div>
-    <!--
-All items after the first one (0) have to be hidden. Jquery fadeout of 1500ms is applied before loading next div, then fadein. 
-Image is displayed during 5000ms
--->
-    <script>
-        $("#slideshow > div:gt(0)").hide();
+
+<script>
+    $("#slideshow > div:gt(0)").hide();
         setInterval(function () {
             $('#slideshow > div:first')
                 .fadeOut(1500)
@@ -90,7 +75,7 @@ Image is displayed during 5000ms
                 .end()
                 .appendTo('#slideshow');
         }, 5000);
-    </script>
+</script>
 </body>
 
 </html>
