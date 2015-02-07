@@ -32,6 +32,9 @@ h2 {float: bottom;
 /* 
 Menu Design
 */
+.fixed {
+    position: fixed;
+}
 
 .menu {
     font-family: Hatori Henzo;
@@ -43,6 +46,7 @@ Menu Design
     clear: both;
 
 }
+
 
 ul > li{
     list-style: none;
@@ -57,7 +61,6 @@ li a:hover {
     color: #3b5998;
     text-shadow: 0 0 1px #3b5998;
     font-size: xx-large;
-        display: inline;
 }
 
 .menuimg {
