@@ -122,8 +122,27 @@ function shirtcolour() {
 
 }
 
-/*function addtocart by Joaor*/
+/*function addtocart by Joao*/
 
 function addtocart() {
-    alert("Your request was sucessfully processed");
+    var type = document.getElementById("shirtmodel").value;
+    var col = document.getElementById("color").value;
+    var size = document.getElementById("shirtsize").value;
+    var qtty = document.getElementById("quantity").value;
+    var txt = document.getElementById("txtshirt").value;
+    var pos =  document.getElementsByName("txtpos");
+    var txtcol = document.getElementById("textcolor").value;
+    var logo = document.getElementsByName("logoyn");
+    
+   for (i=0; i < pos.length; i++) {
+            if (pos[i].checked===true) {     
+            posval = pos[i].value;};}
+      
+    for (i=0; i < logo.length; i++) {
+            if (logo[i].checked===true) {     
+            logoval = logo[i].value;};}
+    
+    
+    alert("You asked for " + type + " sleeves and colour: " + col + " in size " + size + " " + qtty + " " + txt + " " + posval + " " + txtcol + " " + logoval);
+    
 };

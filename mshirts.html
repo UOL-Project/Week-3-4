@@ -69,7 +69,7 @@ Kevin Gargo
                 <option value="xxl">XXL</option>
             </select>
             <p>Quantity:</p>
-            <input type="number" name="quantity" min="1" max="10" value="1">
+            <input type="number" id="quantity" name="quantity" min="1" max="10" value="1">
             <p>Type your text (max 50 characters)</p>
             <textarea id='txtshirt' name="TextShirt" maxlength="50"></textarea>
             <p>Text position ?</p>
@@ -79,7 +79,7 @@ Kevin Gargo
             <br>
             <p>Select your text color:</p>
             <select id="textcolor">
-                <option value="black">Black</option>
+                <option value="black" selected="selected">Black</option>
                 <option value="white">White</option>
                 <option value="blue">Blue</option>
                 <option value="green">Green</option>
@@ -97,8 +97,8 @@ Kevin Gargo
             <div id="logosquare" ondrop="drop(event)" ondragover="allowDrop(event)">Drop here the logo</div>
             <br>
             <p>
-                <input type="button" id="add2cart" value="Add to Cart" onclick="addtocart()" />
-                <input type="reset" value="Clear" />
+                <input type="button" id="add2cart" value="Add to Cart" onclick="addtocart()">
+                <input type="reset" value="Clear">
             </p>
         </form>
     </div>
