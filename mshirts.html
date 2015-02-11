@@ -14,22 +14,25 @@ Kevin Gargo
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="UOL Project Week 3-4 Groupe 4, shirt page">
     <script type="text/javascript" src="js/script.js"></script>
-    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css" title="wbgd">
+    <link rel="alternate stylesheet" type="text/css" href="css/dstyle.css" title="dbgd">
+    <link rel="stylesheet" type="text/css" href="css/animate.css" title="animate">
+
 </head>
 
-<body>
+<body id="bgdcolour" onload="checkCookie()">
 
     <!-- Definition of the dynamic menu using the HTML <nav> tag and CSS
 -->
 <div class="fixed">
-<div tabindex="0" class="onclick-menu"><img src="images/Menu-Icon-6.png" alt="menu item" class="menuimg">
+<div tabindex="0" class="onclick-menu"><img src="./images/Menu-Icon-6.png" alt="menu item" class="menuimg">
     <nav class="onclick-menu-content">
         <ul>
             <li><a href="index.html" class="menu">Home</a></li>
-            <li><a href="mshirts.html" class="menu">Men Shirts</a></li>
             <li><a href="wshirts.html" class="menu">Women Shirts</a></li>
             <li><a href="about.html" class="menu">About Us</a></li>
             <li><a href="contact.html" class="menu">Contact</a></li>
+            <li><a href="#" class="menu" onclick="setCSS()">Change site color</a></li>
         </ul>
     </nav>
 </div>
@@ -39,18 +42,19 @@ Kevin Gargo
         <br>
         <p>select the type of shirt you are looking for (long or short sleeves), your logo and/or your text and place your order.</p>
     </div>
-    <div class="leftdiv">
-        <img src="images/t-shirt-white.png" id="imgcolour" alt="shirt selection" ondrop="drop(event)" ondragover="allowDrop(event)">
-    </div>
+    <section class="leftdiv">
+        <img src="images/t-shirt-white.png" id="imgcolour" alt="shirt selection">
+    </section>
+
     <div class="rightdivform">
-        <form>
+        <form action="cart.php" method="post">
             <p>Select your shirt type</p>
-            <select id="shirtmodel" onchange="shirtype()">
+            <select id="shirtmodel" name="shirtmodel" onchange="shirtype()">
                 <option value="short">Short Sleeve</option>
                 <option value="long">Long Sleeve</option>
             </select>
             <p>Select your shirt color:</p>
-            <select id="color" onchange="shirtcolour()">
+            <select id="color" name="color" onchange="shirtcolour()">
                 <option value="white">White</option>
                 <option value="black">Black</option>
                 <option value="blue">Blue</option>
@@ -61,7 +65,7 @@ Kevin Gargo
                 <option value="orange">Orange</option>
             </select>
             <p>Select the size:</p>
-            <select id="shirtsize">
+            <select id="shirtsize" name="shirtsize">
                 <option value="s">S</option>
                 <option value="m">M</option>
                 <option value="l">L</option>
@@ -78,7 +82,7 @@ Kevin Gargo
             <input type="checkbox" name="txtpos" value="back" checked="checked">Back
             <br>
             <p>Select your text color:</p>
-            <select id="textcolor">
+            <select id="textcolor" name="textcolor">
                 <option value="black" selected="selected">Black</option>
                 <option value="white">White</option>
                 <option value="blue">Blue</option>
@@ -95,14 +99,20 @@ Kevin Gargo
             <br>
             <br>
             <div id="logosquare" ondrop="drop(event)" ondragover="allowDrop(event)">Drop here the logo</div>
-            <br>
+            <br>			
+
+                        <p>Please enter your email.</p>
+				<input type="email" name="email" required="required">
+
             <p>
-                <input type="button" id="add2cart" value="Add to Cart" onclick="addtocart()">
+                <input type="submit" name="add2cart" value="Add to Cart" onclick="addtocart()">
                 <input type="reset" value="Clear">
             </p>
+			<br>
+
         </form>
     </div>
-
+<div class="iframe">
     <div id="logonavbar">
         <div id="logopage">
             <ul>
@@ -123,6 +133,23 @@ Kevin Gargo
         </div>
         <iframe src="category/cat4.html" id="catframe" width="610" height="580"></iframe>
     </div>
+</div>
+<div>
+            <br>
+            <nav>
+        <ul class="submenu">
+            <li><a href="index.html">Home</a></li>
+            <li>-</li>
+            <li><a href="wshirts.html">Women Shirts</a></li>
+            <li>-</li>
+            <li><a href="about.html">About Us</a></li>
+            <li>-</li>
+            <li><a href="contact.html">Contact</a></li>
+            <li>-</li>
+            <li><a href="#" onclick="setCSS()">Change site color</a></li>
+        </ul>
+    </nav>	
+</div>
 </body>
 
 </html>

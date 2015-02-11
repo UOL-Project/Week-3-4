@@ -16,8 +16,9 @@ Kevin Gargo
     <!--
 Link to external documents
 -->
-<link rel="stylesheet" type="text/css" href="css/style.css" title="defaultcss">    
-<link rel="stylesheet" type="text/css" href="css/animate.css">
+<link rel="stylesheet" type="text/css" href="css/style.css" title="wbgd">
+<link rel="alternate stylesheet" type="text/css" href="css/dstyle.css" title="dbgd">
+<link rel="stylesheet" type="text/css" href="css/animate.css" title="animate">
 
     <!--
 JQuery is used for the slideshow and animated title part
@@ -30,19 +31,19 @@ JQuery is used for the slideshow and animated title part
 
 </head>
 
-<body>
+<body id="bgdcolour" onload="checkCookie()">
 
     <!-- Definition of the dynamic menu using the HTML <nav> tag and CSS
 -->
 <div class="fixed">
-<div tabindex="0" class="onclick-menu"><img src="images/Menu-Icon-6.png" alt="menu item" class="menuimg">
+<div tabindex="0" class="onclick-menu"><img src="./images/Menu-Icon-6.png" alt="menu item" class="menuimg">
     <nav class="onclick-menu-content">
         <ul>
-            <li><a href="index.html" class="menu">Home</a></li>
             <li><a href="mshirts.html" class="menu">Men Shirts</a></li>
             <li><a href="wshirts.html" class="menu">Women Shirts</a></li>
             <li><a href="about.html" class="menu">About Us</a></li>
             <li><a href="contact.html" class="menu">Contact</a></li>
+            <li><a href="#" class="menu" onclick="setCSS()">Change site color</a></li>
         </ul>
     </nav>
 </div>
@@ -65,7 +66,24 @@ Slideshow
             <img class="resize" src="./images/shirts.jpg" alt="shirts image">
         </div>
     </div>
-
+    <!-- Definition of the submenu to be displayed at the bottom of the page in case of issue with webbrowers for displaying previous menu
+-->
+	<div>
+	    <nav>
+        <ul class="submenu">
+            <li><a href="mshirts.html">Men Shirts</a></li>
+            <li>-</li>
+            <li><a href="wshirts.html">Women Shirts</a></li>
+            <li>-</li>
+            <li><a href="about.html">About Us</a></li>
+            <li>-</li>
+            <li><a href="contact.html">Contact</a></li>
+            <li>-</li>
+            <li><a href="#" onclick="setCSS()">Change site color</a></li>
+        </ul>
+    </nav>	
+	</div>
+	
 <script>
     $("#slideshow > div:gt(0)").hide();
         setInterval(function () {

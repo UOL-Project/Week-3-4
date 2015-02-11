@@ -19,7 +19,7 @@ Kevin Gargo
     <script type="text/javascript" src="js/script.js"></script>
 </head>
 
-<body>
+<body id="bgdcolour" onload="checkCookie()" class="whitebgd">
      <div class="fixed">
 <div tabindex="0" class="onclick-menu"><img src="images/Menu-Icon-6.png" alt="menu item" class="menuimg">
     <nav class="onclick-menu-content">
@@ -28,7 +28,7 @@ Kevin Gargo
             <li><a href="mshirts.html" class="menu">Men Shirts</a></li>
             <li><a href="wshirts.html" class="menu">Women Shirts</a></li>
             <li><a href="about.html" class="menu">About Us</a></li>
-            <li><a href="contact.html" class="menu">Contact</a></li>
+            <li><a href="#" class="menu" onclick="setCSS()">Change site color</a></li>
         </ul>
     </nav>
 </div>
@@ -38,9 +38,9 @@ Kevin Gargo
         <p>feel in the following form, and don't forget to leave us your email:</p>
         <form>
             <ul>
-                <li>Having a customer ID ?</li>
+                <li>Having an order ID ?</li>
             </ul>
-            <input type='text' class='formbox' id='customerid' placeholder="ID" name="Customer ID" size='8'>
+            <input type='text' class='formbox' placeholder="Order ID" name="cnumber">
             <ul>
                 <li>Leave us your message:</li>
             </ul>
@@ -49,6 +49,19 @@ Kevin Gargo
                 <li>an email for us to reply ?</li>
             </ul>
             <input type='email' class='formbox' id='email' placeholder="toto@toto.com" name="email" required="required">
+            <br><ul>
+                <li>Having an order ID ?</li>
+            </ul>
+            <br>
+            <input type="submit">
+            <input type="reset">
+        </form>
+        <h2>Want's to know the status of your command ?</h2>
+        <form action="retrieve.php" method="get">
+            <ul>
+                <li>Enter your order id</li>
+            </ul>
+            <input type='text' class='formbox' id='cnumber' placeholder="Order ID" name="cnumber">
             <br>
             <br>
             <input type="submit">
@@ -58,6 +71,21 @@ Kevin Gargo
     <div class="rightdiv">
         <img src='images/Internet_is_Full.jpg' alt='Internet is full'>
     </div>
+    	<div>
+	    <nav>
+        <ul class="submenu">
+            <li><a href="index.html">Home</a></li>
+            <li>-</li>
+            <li><a href="mshirts.html">Men Shirts</a></li>
+            <li>-</li>
+            <li><a href="wshirts.html">Women Shirts</a></li>
+            <li>-</li>
+            <li><a href="about.html">About Us</a></li>
+            <li>-</li>
+            <li><a href="#" onclick="setCSS()">Change site color</a></li>
+        </ul>
+    </nav>	
+	</div>
 </body>
 
 </html>

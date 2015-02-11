@@ -109,8 +109,8 @@ Menu Design
 	 * Menu at the bottom of the page
 */
 .submenu {
-    clear: both;
-    margin-left: 32%;
+	float: bottom;
+        margin-left: 32%;
 	}
         
         ul.submenu li a {
@@ -121,6 +121,7 @@ Menu Design
 
 .submenu li{
 	display: inline-block;
+
         
 	}
 /* 
@@ -261,15 +262,6 @@ input[type="number"] {
     text-align: right;
 }
 
-/* 
-Iframe by Joao
-*/
-
-iframe {
-    width: 700px;
-    
-}
-
 #logosquare {
     width: 300px;
     height: 300px;
@@ -313,15 +305,13 @@ iframe {
     /* position: relative;
     top: 500px; */
     float: left;
-    width: 702px;
-    padding: 0 2em;
+    width: 874px;
     /* height: 375px;*/
     border: 1px solid darkblue;
     border-radius: 8px;
-    margin-bottom: 1em;
 }
 
-#ul.logopage {
+#logopage {
     float:left;
     height: 64px;
     padding-left: 5px;

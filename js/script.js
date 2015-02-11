@@ -6,7 +6,96 @@
  * Kevin Gargo
  */
 
+ /*
+  * Function checkcookie and setcookie for background color under development
+ */ 
+  function checkCookie() {
+  /*
+      var cookie = getCookie("mkurshirt");
+  if  (cookie === "style") {
+      var col = 'style';
+      setCSS(col);
+  }
+  if (cookie === "dstyle") {
+      var col = 'dstyle';
+      setCSS(col);
+  }
+  if (cookie === "undefined"){
+var col = "style";
+setCSS(col);
+  return col; 
+	  }
+          */}
+ 
+ function setCookiechg(col) {
+    var d = new Date();
+	d.setTime(d.getTime() + (24*60*60*1000));
+    var expires = "expires="+d.toUTCString();
+		document.cookie = "mkurshirt" + "=" + col + "; " + expires;
+		} 
 
+  function getCookie(mkurshirt) {
+	var name = mkurshirt + "=";
+    var ca = document.cookie.split(';');
+    for(var i=0; i<ca.length; i++) {
+        var c = ca[i];
+        while (c.charAt(0)===' ') c = c.substring(1);
+        if (c.indexOf(name) === 0) return c.substring(name.length, c.length);
+    }
+    return "";
+}
+
+function setCSS(col) {
+    
+    /*
+    getCookie("mkurshirt");
+    if (str !== "style" & str !== "dstyle") {
+            var col = "style";
+        setCookiechg(col);}
+    else {
+	var actual = document.styleSheets;
+	for (i=0; i < actual.length; i++) {
+            if (actual[i].href === null){
+            }
+            else {
+	var str = actual[i].href;
+	var str = str.substring(str.lastIndexOf("."),str.lastIndexOf("/")+1);
+        alert(str);
+        if (str === col){
+			actual[i].disabled = false;
+			}
+	else actual[i].disabled = true;
+        setCookiechg(col);
+	}}	
+}*/
+    alert("Function under development");
+}
+ 
+/*
+	 * Function to Change CSS stylesheed default, by disabling the other one.
+ */
+
+ 
+ function changeCSS(col, cssLinkIndex) {
+	var actual = document.styleSheets;
+	for (i=0; i < actual.length; i++) {
+	var str = actual[i].href;
+	var str = str.substring(str.lastIndexOf("."),str.lastIndexOf("/"));
+	if (str === col) {
+			actual[i].disabled = true;
+			}
+	else actual[i].disabled = false;
+	}
+     if (col === "dstyle") {
+		var col = "style";
+   setCookiechg(col); }
+   
+        else {
+		var col = "dstyle";
+   setCookiechg(col);
+		
+		}
+            }
 /* 
 Use of title effect provided by https://github.com/jschr/textillate Fabien
  */
@@ -45,7 +134,7 @@ function drop(ev) {
 function shirtype() {
     switch (document.getElementById("shirtmodel").value) {
     case "short":
-        document.getElementById("imgcolour").src = "images/t-shirt-white.png";
+       document.getElementById("imgcolour").src = "images/t-shirt-white.png";
         break;
     case "long":
         document.getElementById("imgcolour").src = "images/hoodies-white.png";
@@ -64,36 +153,14 @@ function shirtcolour() {
     if (type === "short") {
         document.getElementById("imgcolour").src = "images/t-shirt-" + shirtcolor + ".png";
         }
-    else {
-        document.getElementById("imgcolour").src = "images/hoodies-" + shirtcolor + ".png";
-    } 
-}
+     else {
+document.getElementById("imgcolour").src = "images/hoodies-" + shirtcolor + ".png";
 
-/*function addtocart by Joao*/
+        } /*switch*/
 
-function addtocart() {
-    var type = document.getElementById("shirtmodel").value;
-    var col = document.getElementById("color").value;
-    var size = document.getElementById("shirtsize").value;
-    var qtty = document.getElementById("quantity").value;
-    var txt = document.getElementById("txtshirt").value;
-    var pos =  document.getElementsByName("txtpos");
-    var txtcol = document.getElementById("textcolor").value;
-    var logo = document.getElementsByName("logoyn");
-    
-   for (i=0; i < pos.length; i++) {
-            if (pos[i].checked===true) {     
-            posval = pos[i].value;};}
-      
-    for (i=0; i < logo.length; i++) {
-            if (logo[i].checked===true) {     
-            logoval = logo[i].value;};}
+    } /*else*/
     
     
-    alert("You asked for " + type + " sleeves and colour: " + col + " in size " + size + " " + qtty + " " + txt + " " + posval + " " + txtcol + " " + logoval);
-    
-};
-
 function fncategory(menuid){
     /* first clean up any previous styling */
     
@@ -106,3 +173,35 @@ function fncategory(menuid){
     document.getElementById(menuid).className = "logobaractive";
     document.getElementById("catframe").src = logourl;
 }
+
+
+/*function addtocart by Joao*/
+
+function addtocart() {
+    var type = document.getElementById("shirtmodel").value;
+    var col = document.getElementById("color").value;
+    var size = document.getElementById("shirtsize").value;
+    var qtty = document.getElementById("quantity").value;
+    var txt = document.getElementById("txtshirt").value;
+    var pos =  document.getElementsByName("txtpos");
+    var txtcol = document.getElementById("textcolor").value;
+    var logo = document.getElementsByName("logoyn");
+    var conf="";
+    var time = Date();
+    var uuid = "";
+    
+   for (i=0; i < pos.length; i++) {
+            if (pos[i].checked===true) {     
+            posval = pos[i].value;};}
+      
+    for (i=0; i < logo.length; i++) {
+            if (logo[i].checked===true) {     
+            logoval = logo[i].value;};}
+    
+    if (logoval === "yes") {
+    var conf = confirm("Please confirm that You asked for "+ qtty + " "+ type + " sleeves shirt(s) of colour: " + col + " in size " + size + " with the following text: " + txt + " in position:" + posval + " and text color" + txtcol + " with a logo.");
+    }
+    else {
+        
+    var conf = confirm("Please confirm that You asked for "+ qtty + " "+ type + " sleeves shirt(s) of colour: " + col + " in size " + size + " with the following text: " + txt + " in position:" + posval + " and text color" + txtcol + " without a logo.");
+    }}

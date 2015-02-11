@@ -15,11 +15,14 @@ Kevin Gargo
     <!--
 Link to external documents
 -->
-    <link rel="stylesheet" type="text/css" href="css/style.css">
+<link rel="stylesheet" type="text/css" href="css/style.css" title="wbgd">
+<link rel="alternate stylesheet" type="text/css" href="css/dstyle.css" title="dbgd">
+<link rel="stylesheet" type="text/css" href="css/animate.css" title="animate">
     <script type="text/javascript" src="js/script.js"></script>
 </head>
 
-<body>
+<body id="bgdcolour" onload="checkCookie()">
+
    
         <!-- Definition of the dynamic menu using the HTML <nav> tag and CSS
     Created by Fabien -->
@@ -30,8 +33,8 @@ Link to external documents
             <li><a href="index.html" class="menu">Home</a></li>
             <li><a href="mshirts.html" class="menu">Men Shirts</a></li>
             <li><a href="wshirts.html" class="menu">Women Shirts</a></li>
-            <li><a href="about.html" class="menu">About Us</a></li>
             <li><a href="contact.html" class="menu">Contact</a></li>
+            <li><a href="#" class="menu" onclick="setCSS()">Change site color</a></li>
         </ul>
     </nav>
 </div>
@@ -325,7 +328,8 @@ Link to external documents
                 <th class="th2">Shopping Cart</th>
                 <th class="th2">CSS</th>
                 <th class="th2">JavaScript</th>
-
+				<th class="th2">PHP</th>
+				<th class="th2">SQL</th>
             </tr>
             <tr class="tr2">
                 <td class="left">Fabien</td>
@@ -334,8 +338,10 @@ Link to external documents
                 <td class="td2">X</td>
                 <td class="td2">X</td>
                 <td class="td2">X</td>
-                <td class="td2"></td>
                 <td class="td2">X</td>
+                <td class="td2">X</td>
+                <td class="td2">X</td>
+				<td class="td2">X</td>
                 <td class="td2">X</td>
             </tr>
             <tr class="tr2">
@@ -348,6 +354,8 @@ Link to external documents
                 <td class="td2"></td>
                 <td class="td2"></td>
                 <td class="td2"></td>
+				<td class="td2"></td>
+                <td class="td2"></td>
             </tr>
             <tr class="tr2">
                 <td class="left">Joao</td>
@@ -359,8 +367,25 @@ Link to external documents
                 <td class="td2"></td>
                 <td class="td2">X</td>
                 <td class="td2">X</td>
+				<td class="td2"></td>
+                <td class="td2"></td>
             </tr>
         </table>
+        	<div>
+	    <nav>
+        <ul class="submenu">
+            <li><a href="index.html">Home</a></li>
+            <li>-</li>
+            <li><a href="mshirts.html">Men Shirts</a></li>
+            <li>-</li>
+            <li><a href="wshirts.html">Women Shirts</a></li>
+            <li>-</li>
+            <li><a href="contact.html">Contact</a></li>
+            <li>-</li>
+            <li><a href="#" onclick="setCSS()">Change site color</a></li>
+        </ul>
+    </nav>	
+	</div>
     </div>
 </body>
 
