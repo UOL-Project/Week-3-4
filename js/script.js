@@ -72,7 +72,7 @@ function setCSS(col) {
 }
  
 /*
-	 * Function to Change CSS stylesheed default, by disabling the other one.
+	 * Function to Change the default CSS stylesheed , by enabling/disabling the sheets.
  */
 
  
@@ -152,14 +152,27 @@ function shirtcolour() {
     
     if (type === "short") {
         document.getElementById("imgcolour").src = "images/t-shirt-" + shirtcolor + ".png";
-        }
+        if (shirtcolor === txtcolor) { alert("Warning !! Text color and shirt color are the same");
+    }
      else {
 document.getElementById("imgcolour").src = "images/hoodies-" + shirtcolor + ".png";
-
+if (shirtcolor === txtcolor) { alert("Warning !! Text color and shirt color are the same");
+    }
         } /*switch*/
 
-    } /*else*/
+    } /*else*/}
     
+ function txtcolor() {
+
+    var txtcolor = document.getElementById("textcolor").value;
+    var txtbox = document.getElementById("txtshirt");
+    var shirtcolor = document.getElementById("color").value;
+    if (shirtcolor === txtcolor) { alert("Warning !! Text color and shirt color are the same");
+    }
+        else {
+        txtbox.setAttribute("style", "color: " + txtcolor +";" + "background-color: " + shirtcolor +";");
+        }
+ }
     
 function fncategory(menuid){
     /* first clean up any previous styling */
@@ -178,6 +191,7 @@ function fncategory(menuid){
 /*function addtocart by Joao*/
 
 function addtocart() {
+    
     var type = document.getElementById("shirtmodel").value;
     var col = document.getElementById("color").value;
     var size = document.getElementById("shirtsize").value;
@@ -189,6 +203,8 @@ function addtocart() {
     var conf="";
     var time = Date();
     var uuid = "";
+    validateForm(txt);
+    
     
    for (i=0; i < pos.length; i++) {
             if (pos[i].checked===true) {     

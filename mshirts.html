@@ -55,6 +55,7 @@ Kevin Gargo
             </select>
             <p>Select your shirt color:</p>
             <select id="color" name="color" onchange="shirtcolour()">
+                <option value="" selected="selected">Please choose one</option>
                 <option value="white">White</option>
                 <option value="black">Black</option>
                 <option value="blue">Blue</option>
@@ -82,8 +83,9 @@ Kevin Gargo
             <input type="checkbox" name="txtpos" value="back" checked="checked">Back
             <br>
             <p>Select your text color:</p>
-            <select id="textcolor" name="textcolor">
-                <option value="black" selected="selected">Black</option>
+            <select id="textcolor" name="textcolor" onchange="txtcolor()">
+                <option value="" selected="selected">Please choose one</option>
+                <option value="black">Black</option>
                 <option value="white">White</option>
                 <option value="blue">Blue</option>
                 <option value="green">Green</option>
@@ -112,7 +114,7 @@ Kevin Gargo
 
         </form>
     </div>
-<div class="iframe">
+<div>
     <div id="logonavbar">
         <div id="logopage">
             <ul>
