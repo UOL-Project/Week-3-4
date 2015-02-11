@@ -45,81 +45,28 @@ function drop(ev) {
 function shirtype() {
     switch (document.getElementById("shirtmodel").value) {
     case "short":
-        document.getElementById("imgcolour").src = "images/t-shirt.png";
+        document.getElementById("imgcolour").src = "images/t-shirt-white.png";
         break;
     case "long":
-        document.getElementById("imgcolour").src = "images/hoodies.png";
+        document.getElementById("imgcolour").src = "images/hoodies-white.png";
         break;
     }
 }
 
 
 /* change the shirt colour by Joao & Fabien */
+/* (Joao) added the variable shirtcolor and reduced the code to only two dynamic lines */
 function shirtcolour() {
 
     var type = document.getElementById("shirtmodel").value;
+    var shirtcolor = document.getElementById("color").value;
+    
     if (type === "short") {
-        switch (document.getElementById("color").value) {
-        case "white":
-            document.getElementById("imgcolour").src = "images/t-shirt.png";
-            break;
-        case "black":
-            document.getElementById("imgcolour").src = "images/t-shirt_black.png";
-            break;
-        case "blue":
-            document.getElementById("imgcolour").src = "images/t-shirt_blue.png";
-            break;
-        case "green":
-            document.getElementById("imgcolour").src = "images/t-shirt_green.png";
-            break;
-        case "red":
-            document.getElementById("imgcolour").src = "images/t-shirt_red.png";
-            break;
-        case "yellow":
-            document.getElementById("imgcolour").src = "images/t-shirt_yellow.png";
-            break;
-        case "pink":
-            document.getElementById("imgcolour").src = "images/t-shirt_pink.png";
-            break;
-        case "orange":
-            document.getElementById("imgcolour").src = "images/t-shirt_orange.png";
-            break;
-        default:
-            document.getElementById("imgcolour").src = "images/t-shirt.png";
+        document.getElementById("imgcolour").src = "images/t-shirt-" + shirtcolor + ".png";
         }
-    } else {
-        switch (document.getElementById("color").value) {
-        case "white":
-            document.getElementById("imgcolour").src = "images/hoodies.png";
-            break;
-        case "black":
-            document.getElementById("imgcolour").src = "images/hoodies-black.png";
-            break;
-        case "blue":
-            document.getElementById("imgcolour").src = "images/hoodies-blue.png";
-            break;
-        case "green":
-            document.getElementById("imgcolour").src = "images/hoodies-green.png";
-            break;
-        case "red":
-            document.getElementById("imgcolour").src = "images/hoodies-red.png";
-            break;
-        case "yellow":
-            document.getElementById("imgcolour").src = "images/hoodies-yellow.png";
-            break;
-        case "pink":
-            document.getElementById("imgcolour").src = "images/hoodies-pink.png";
-            break;
-        case "orange":
-            document.getElementById("imgcolour").src = "images/hoodies-orange.png";
-            break;
-        default:
-            document.getElementById("imgcolour").src = "images/hoodies.png";
-        } /*switch*/
-
-    } /*else*/
-
-
+    else {
+        document.getElementById("imgcolour").src = "images/hoodies-" + shirtcolor + ".png";
+    } 
 }
 
 /*function addtocart by Joao*/
@@ -146,3 +93,16 @@ function addtocart() {
     alert("You asked for " + type + " sleeves and colour: " + col + " in size " + size + " " + qtty + " " + txt + " " + posval + " " + txtcol + " " + logoval);
     
 };
+
+function fncategory(menuid){
+    /* first clean up any previous styling */
+    
+    for (var i = 1; i < 13; i++) {
+        document.getElementById("cat" + i).className = "logobarinactive";
+    }
+
+    /* apply the custom syle for a selected tab */
+    var logourl = "category/" + menuid + ".html";
+    document.getElementById(menuid).className = "logobaractive";
+    document.getElementById("catframe").src = logourl;
+}

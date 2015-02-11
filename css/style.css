@@ -237,33 +237,68 @@ input[type="number"] {
     text-align: right;
 }
 
-#img1:hover {
-    opacity: 0.4;
-}
-
-#img2:hover {
-    opacity: 0.4;
-}
-
-#img3:hover {
-    opacity: 0.4;
-}
-
-#img4:hover {
-    opacity: 0.4;
-}
-
-#img5:hover {
-    opacity: 0.4;
-}
-
-#img6:hover {
-    opacity: 0.4;
-}
-
 #logosquare {
     width: 300px;
     height: 300px;
     border: 1px solid black;
     text-align: center;
+}
+
+#logonavbar #logopage ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#logonavbar #logopage ul li a {
+    float: left;
+    padding: 20px;
+    text-decoration: none;
+    height: 20px;
+    line-height: 20px;
+    width: 75px;
+    text-align: center;
+    display: block;
+    border: 1px solid darkblue;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    font-size: 12pt;
+}
+
+#logonavbar #logopage ul li a:hover {
+    float: left;
+    padding: 20px;
+    border: 1px solid darkblue;
+    margin-right: 0px;
+    background-color: highlight;
+    text-shadow: 1px 1px 1px #888888;
+    color: darkblue;
+    font-size: 14pt;
+}
+
+#logonavbar {
+    /* position: relative;
+    top: 500px; */
+    float: left;
+    width: 874px;
+    /* height: 375px;*/
+    border: 1px solid darkblue;
+    border-radius: 8px;
+}
+
+#logopage {
+    float:left;
+    height: 64px;
+    padding-left: 5px;
+}
+
+.logobaractive{
+    font-weight: bolder;
+    background-color: slateblue;
+    color: white;
+}
+
+.logobarinactive{
+    font-weight: normal;
+
 }

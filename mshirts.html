@@ -40,7 +40,7 @@ Kevin Gargo
         <p>select the type of shirt you are looking for (long or short sleeves), your logo and/or your text and place your order.</p>
     </div>
     <div class="leftdiv">
-        <img src="images/t-shirt.png" id="imgcolour" alt="shirt selection" ondrop="drop(event)" ondragover="allowDrop(event)">
+        <img src="images/t-shirt-white.png" id="imgcolour" alt="shirt selection" ondrop="drop(event)" ondragover="allowDrop(event)">
     </div>
     <div class="rightdivform">
         <form>
@@ -89,9 +89,9 @@ Kevin Gargo
                 <option value="orange">Orange</option>
             </select>
             <p>Apply a logo ?</p>
-            <input type="checkbox" name="logoyn" value="yes">Yes
+            <input type="radio" name="logoyn" value="yes">Yes
             <br>
-            <input type="checkbox" name="logoyn" value="no" checked="checked">No
+            <input type="radio" name="logoyn" value="no" checked="checked">No
             <br>
             <br>
             <div id="logosquare" ondrop="drop(event)" ondragover="allowDrop(event)">Drop here the logo</div>
@@ -102,13 +102,26 @@ Kevin Gargo
             </p>
         </form>
     </div>
-    <div>
-        <img src="images/aliwal_north.png" id="img1" alt="aliwal north" draggable="true" ondragstart="drag(event)" />
-        <img src="images/anti-globalization.jpg" id="img2" alt="Anti-Globalization" draggable="true" ondragstart="drag(event)" />
-        <img src="images/did.jpg" id="img3" alt="Did" draggable="true" ondragstart="drag(event)" />
-        <img src="images/hopp_schwiiz.jpg" id="img4" alt="Hopp Schwiiz" draggable="true" ondragstart="drag(event)" />
-        <img src="images/iceberg.jpg" id="img5" alt="Iceberg" draggable="true" ondragstart="drag(event)" />
-        <img src="images/jack_daniels.jpg" id="img6" alt="Jack Daniels" draggable="true" ondragstart="drag(event)" />
+
+    <div id="logonavbar">
+        <div id="logopage">
+            <ul>
+                <li><a href="wshirts.html#logonavbar" id="cat1" onclick="fncategory('cat1')">Abstract</a></li>
+                <li><a href="wshirts.html#logonavbar" id="cat2" onclick="fncategory('cat2')">Animals</a></li>
+                <li><a href="wshirts.html#logonavbar" id="cat3" onclick="fncategory('cat3')">Emoticons</a></li>
+                <li><a href="wshirts.html#logonavbar" id="cat4" onclick="fncategory('cat4')">Fashion</a></li>
+                <li><a href="wshirts.html#logonavbar" id="cat5" onclick="fncategory('cat5')">Misc</a></li>
+                <li><a href="wshirts.html#logonavbar" id="cat6" onclick="fncategory('cat6')">Romantic</a></li>
+                <li><a href="wshirts.html#logonavbar" id="cat7" onclick="fncategory('cat7')">Sexy</a></li>
+                <li><a href="wshirts.html#logonavbar" id="cat8" onclick="fncategory('cat8')">Signs</a></li>
+                <li><a href="wshirts.html#logonavbar" id="cat9" onclick="fncategory('cat9')">Totem</a></li>
+                <li><a href="wshirts.html#logonavbar" id="cat10" onclick="fncategory('cat10')">Vacation</a></li>
+                <li><a href="wshirts.html#logonavbar" id="cat11" onclick="fncategory('cat11')">Vintage</a></li>
+                <li><a href="wshirts.html#logonavbar" id="cat12" onclick="fncategory('cat12')">Upload</a></li>
+            </ul>
+            
+        </div>
+        <iframe src="category/cat4.html" id="catframe" width="610" height="580"></iframe>
     </div>
 </body>
 
