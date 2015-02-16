@@ -21,17 +21,7 @@ Kevin Gargo
 
 <body id="bgdcolour" onload="checkCookie()" class="whitebgd">
      <div class="fixed">
-<div tabindex="0" class="onclick-menu"><img src="images/Menu-Icon-6.png" alt="menu item" class="menuimg">
-    <nav class="onclick-menu-content">
-        <ul>
-            <li><a href="index.html" class="menu">Home</a></li>
-            <li><a href="mshirts.html" class="menu">Men Shirts</a></li>
-            <li><a href="wshirts.html" class="menu">Women Shirts</a></li>
-            <li><a href="about.php" class="menu">About Us</a></li>
-            <li><a href="#" class="menu" onclick="setCSS()">Change site color</a></li>
-        </ul>
-    </nav>
-</div>
+<?php include 'menu.php'; ?>
      </div>
     <div class="leftdiv">
         <h2>Want's to leave us a message ?</h2>
@@ -72,19 +62,7 @@ Kevin Gargo
         <img src='images/Internet_is_Full.jpg' alt='Internet is full'>
     </div>
     	<div>
-	    <nav>
-        <ul class="submenu">
-            <li><a href="index.html">Home</a></li>
-            <li>-</li>
-            <li><a href="mshirts.html">Men Shirts</a></li>
-            <li>-</li>
-            <li><a href="wshirts.html">Women Shirts</a></li>
-            <li>-</li>
-            <li><a href="about.php">About Us</a></li>
-            <li>-</li>
-            <li><a href="#" onclick="setCSS()">Change site color</a></li>
-        </ul>
-    </nav>	
+<?php include 'footer.php'; ?>	
 	</div>
 </body>
 

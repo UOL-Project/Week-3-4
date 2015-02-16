@@ -25,17 +25,7 @@ Kevin Gargo
     <!-- Definition of the dynamic menu using the HTML <nav> tag and CSS
 -->
 <div class="fixed">
-<div tabindex="0" class="onclick-menu"><img src="./images/Menu-Icon-6.png" alt="menu item" class="menuimg">
-    <nav class="onclick-menu-content">
-        <ul>
-            <li><a href="index.html" class="menu">Home</a></li>
-            <li><a href="wshirts.html" class="menu">Women Shirts</a></li>
-            <li><a href="about.php" class="menu">About Us</a></li>
-            <li><a href="contact.html" class="menu">Contact</a></li>
-            <li><a href="#" class="menu" onclick="setCSS()">Change site color</a></li>
-        </ul>
-    </nav>
-</div>
+<?php include 'menu.php'; ?>
 </div>
     <div>
         <h2 class="tlt">Make your own shirt</h2>
@@ -138,19 +128,7 @@ Kevin Gargo
 </div>
 <div>
             <br>
-            <nav>
-        <ul class="submenu">
-            <li><a href="index.html">Home</a></li>
-            <li>-</li>
-            <li><a href="wshirts.html">Women Shirts</a></li>
-            <li>-</li>
-            <li><a href="about.php">About Us</a></li>
-            <li>-</li>
-            <li><a href="contact.html">Contact</a></li>
-            <li>-</li>
-            <li><a href="#" onclick="setCSS()">Change site color</a></li>
-        </ul>
-    </nav>	
+<?php include 'footer.php'; ?>
 </div>
 </body>
 

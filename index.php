@@ -36,17 +36,7 @@ JQuery is used for the slideshow and animated title part
     <!-- Definition of the dynamic menu using the HTML <nav> tag and CSS
 -->
 <div class="fixed">
-<div tabindex="0" class="onclick-menu"><img src="./images/Menu-Icon-6.png" alt="menu item" class="menuimg">
-    <nav class="onclick-menu-content">
-        <ul>
-            <li><a href="mshirts.html" class="menu">Men Shirts</a></li>
-            <li><a href="wshirts.html" class="menu">Women Shirts</a></li>
-            <li><a href="about.php" class="menu">About Us</a></li>
-            <li><a href="contact.html" class="menu">Contact</a></li>
-            <li><a href="#" class="menu" onclick="setCSS()">Change site color</a></li>
-        </ul>
-    </nav>
-</div>
+<?php include ('menu.php');?>
 </div>
 
     <br>
@@ -69,19 +59,7 @@ Slideshow
     <!-- Definition of the submenu to be displayed at the bottom of the page in case of issue with webbrowers for displaying previous menu
 -->
 	<div>
-	    <nav>
-        <ul class="submenu">
-            <li><a href="mshirts.html">Men Shirts</a></li>
-            <li>-</li>
-            <li><a href="wshirts.html">Women Shirts</a></li>
-            <li>-</li>
-            <li><a href="about.php">About Us</a></li>
-            <li>-</li>
-            <li><a href="contact.html">Contact</a></li>
-            <li>-</li>
-            <li><a href="#" onclick="setCSS()">Change site color</a></li>
-        </ul>
-    </nav>	
+<?php include 'footer.php' ?>
 	</div>
 	
 <script>
