@@ -31,24 +31,16 @@ and open the template in the editor.
     <div class="leftdiv">
          <h2 class="tlt">Your Order</h2>
         <?php
-$servername = "laureatestudentserver.com";
-$username = "laureate_IN103";
-$password = "9ock4nyWV4XJ";
-$dbname = "laureate_IN103";
-
-//Create connection
-$conn = new mysqli($servername, $username, $password, $dbname);
-//Check connection
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-} 
+include 'connection.php';
 
 // retrieve data from the form
 $cnumber = filter_input(INPUT_POST, 'cnumber', FILTER_SANITIZE_NUMBER_INT);
 
 //retrieve last order passed
-$sql = 'SELECT * FROM `laureate_IN103`.`orders`';
-$rowid = $conn->query($sql);
+$STH = $DBPDO->prepare('SELECT * FROM `laureate_IN103`.`orders`');
+//execution of the SQL Query
+$STH->execute();
+$rowid = $STH->fetch();
 if ($rowid->num_rows > 0) {
     // output data of each row
     while($data = $rowid->fetch_assoc()) {

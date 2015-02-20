@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE php>
 <!--
 UOL - Programming the Internet - Group Project
 Week 3 - Assignment
@@ -6,7 +6,7 @@ Fabien Huraux
 Joao Paulo Henriques Remedio  
 Kevin Gargo 
 -->
-<html>
+<php>
 
 <head>
     <title>UOL - Make U'R shirt - Make-it</title>
@@ -108,18 +108,18 @@ Kevin Gargo
     <div id="logonavbar">
         <div id="logopage">
             <ul>
-                <li><a href="wshirts.html#logonavbar" id="cat1" onclick="fncategory('cat1')">Abstract</a></li>
-                <li><a href="wshirts.html#logonavbar" id="cat2" onclick="fncategory('cat2')">Animals</a></li>
-                <li><a href="wshirts.html#logonavbar" id="cat3" onclick="fncategory('cat3')">Emoticons</a></li>
-                <li><a href="wshirts.html#logonavbar" id="cat4" onclick="fncategory('cat4')">Fashion</a></li>
-                <li><a href="wshirts.html#logonavbar" id="cat5" onclick="fncategory('cat5')">Misc</a></li>
-                <li><a href="wshirts.html#logonavbar" id="cat6" onclick="fncategory('cat6')">Romantic</a></li>
-                <li><a href="wshirts.html#logonavbar" id="cat7" onclick="fncategory('cat7')">Sexy</a></li>
-                <li><a href="wshirts.html#logonavbar" id="cat8" onclick="fncategory('cat8')">Signs</a></li>
-                <li><a href="wshirts.html#logonavbar" id="cat9" onclick="fncategory('cat9')">Totem</a></li>
-                <li><a href="wshirts.html#logonavbar" id="cat10" onclick="fncategory('cat10')">Vacation</a></li>
-                <li><a href="wshirts.html#logonavbar" id="cat11" onclick="fncategory('cat11')">Vintage</a></li>
-                <li><a href="wshirts.html#logonavbar" id="cat12" onclick="fncategory('cat12')">Upload</a></li>
+                <li><a href="mshirts.php#logonavbar" id="cat1" onclick="fncategory('cat1')">Abstract</a></li>
+                <li><a href="mshirts.php#logonavbar" id="cat2" onclick="fncategory('cat2')">Animals</a></li>
+                <li><a href="mshirts.php#logonavbar" id="cat3" onclick="fncategory('cat3')">Emoticons</a></li>
+                <li><a href="mshirts.php#logonavbar" id="cat4" onclick="fncategory('cat4')">Fashion</a></li>
+                <li><a href="mshirts.php#logonavbar" id="cat5" onclick="fncategory('cat5')">Misc</a></li>
+                <li><a href="mshirts.php#logonavbar" id="cat6" onclick="fncategory('cat6')">Romantic</a></li>
+                <li><a href="mshirts.php#logonavbar" id="cat7" onclick="fncategory('cat7')">Sexy</a></li>
+                <li><a href="mshirts.php#logonavbar" id="cat8" onclick="fncategory('cat8')">Signs</a></li>
+                <li><a href="mshirts.php#logonavbar" id="cat9" onclick="fncategory('cat9')">Totem</a></li>
+                <li><a href="mshirts.php#logonavbar" id="cat10" onclick="fncategory('cat10')">Vacation</a></li>
+                <li><a href="mshirts.php#logonavbar" id="cat11" onclick="fncategory('cat11')">Vintage</a></li>
+                <li><a href="mshirts.php#logonavbar" id="cat12" onclick="fncategory('cat12')">Upload</a></li>
             </ul>
             
         </div>
@@ -132,4 +132,4 @@ Kevin Gargo
 </div>
 </body>
 
-</html>
+</php>

@@ -5,8 +5,8 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
-echo '	    <nav>
+if (isset($values)){
+echo '<nav>
         <ul class="submenu">
             <li><a href="mshirts.php">Men Shirts</a></li>
             <li>-</li>
@@ -16,6 +16,23 @@ echo '	    <nav>
             <li>-</li>
             <li><a href="contact.php">Contact</a></li>
             <li>-</li>
-            <li><a href="#" onclick="setCSS()">Change site color</a></li>
+            <li><a href="pref.php">Preferences</a></li>
         </ul>
-    </nav>';
+    </nav>';}
+
+else {
+ echo '<nav>
+        <ul class="submenu">
+            <li><a href="mshirts.php">Men Shirts</a></li>
+            <li>-</li>
+            <li><a href="wshirts.php">Women Shirts</a></li>
+            <li>-</li>
+            <li><a href="about.php">About Us</a></li>
+            <li>-</li>
+            <li><a href="contact.php">Contact</a></li>
+            <li>-</li>
+            <li><a href="login.php">Login</a></li>
+        </ul>
+    </nav>';}
+   
+?>

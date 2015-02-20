@@ -182,7 +182,7 @@ function fncategory(menuid){
     }
 
     /* apply the custom syle for a selected tab */
-    var logourl = "category/" + menuid + ".html";
+    var logourl = "category/" + menuid + ".hml";
     document.getElementById(menuid).className = "logobaractive";
     document.getElementById("catframe").src = logourl;
 }
@@ -221,3 +221,18 @@ function addtocart() {
         
     var conf = confirm("Please confirm that You asked for "+ qtty + " "+ type + " sleeves shirt(s) of colour: " + col + " in size " + size + " with the following text: " + txt + " in position:" + posval + " and text color" + txtcol + " without a logo.");
     }}
+
+function checkpwd (){
+    var password = $("#pass1").val();
+    var confirmPassword = $("#pass2").val();
+
+    if (password !== confirmPassword){
+        $("#pass1").css('background-color', 'red');
+        $("#pass2").css('background-color', 'red');}
+    else{
+        $("#pass1").css('background-color', '#D7F2E0');
+        $("#pass2").css('background-color', '#D7F2E0');}
+}
+
+
+
