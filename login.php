@@ -13,8 +13,7 @@ and open the template in the editor.
     <!--
 Link to external documents
 -->
-<link rel="stylesheet" type="text/css" href="css/style.css" title="wbgd">
-<link rel="alternate stylesheet" type="text/css" href="css/dstyle.css" title="dbgd">
+<link rel="stylesheet" type="text/css" href="css/style.css">
 <link rel="stylesheet" type="text/css" href="css/animate.css" title="animate">
 
     <!--
@@ -42,7 +41,7 @@ JQuery is used for the slideshow and animated title part
         <br>
         Enter your password:
         <br>
-        <input type='password' name='pass' placeholder="password">
+        <input type='password' name='pass' placeholder="password" required='required'>
         <br>
         <input type="submit">
         <input type="reset">

@@ -7,7 +7,10 @@ Joao Paulo Henriques Remedio
 Kevin Gargo 
 -->
 <html>
-
+<?php
+$style= '';
+include "getcookie.php";
+?>
 <head>
     <title>UOL - Make U'R shirt - The Team</title>
     <meta charset="UTF-8">
@@ -15,8 +18,7 @@ Kevin Gargo
     <!--
 Link to external documents
 -->
-<link rel="stylesheet" type="text/css" href="css/style.css" title="wbgd">
-<link rel="alternate stylesheet" type="text/css" href="css/dstyle.css" title="dbgd">
+<link rel="stylesheet" type="text/css" href="css/<?php echo (!$style)?'style':rtrim($style," ");?>.css" />
 <link rel="stylesheet" type="text/css" href="css/animate.css" title="animate">
     <script type="text/javascript" src="js/script.js"></script>
 </head>

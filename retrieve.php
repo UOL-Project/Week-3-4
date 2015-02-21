@@ -4,12 +4,15 @@ To change this license header, choose License Headers in Project Properties.
 To change this template file, choose Tools | Templates
 and open the template in the editor.
 -->
+<?php
+$style= '';
+include "getcookie.php";
+?>
 <html>
     <head>
         <meta charset="UTF-8">
         <title>UOL - Make U'R shirt - Shopping Cart</title>
-<link rel="stylesheet" type="text/css" href="css/style.css" title="wbgd">
-<link rel="alternate stylesheet" type="text/css" href="css/dstyle.css" title="dbgd">
+<link rel="stylesheet" type="text/css" href="css/<?php echo (!$style)?'style':rtrim($style," ");?>.css" />
 <link rel="stylesheet" type="text/css" href="css/animate.css" title="animate">
     </head>
 <body id="bgdcolour" onload="setCSS()" class="whitebgd">

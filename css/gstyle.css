@@ -18,7 +18,7 @@ Kevin Gargo
 }
 
 body{
-    background-color: #f7f7f7;
+    background-color: #a19c9c;
     color: #3b5998;
     font-family: Hatori Hanzo, Hatori Hanzo Light;
 }
@@ -252,6 +252,7 @@ Contact page form By Fabien
     float: right;
     width: auto;
     margin: 5em 15em 0 0;
+    border: 1em outset #dfe3ee
 }
 
 .rightdivform {

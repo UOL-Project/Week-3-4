@@ -6,6 +6,10 @@ Fabien Huraux
 Joao Paulo Henriques Remedio  
 Kevin Gargo 
 -->
+<?php
+$style= '';
+include "getcookie.php";
+?>
 <html>
 
 <head>
@@ -14,8 +18,7 @@ Kevin Gargo
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="UOL Project Week 3-4 Groupe 4, shirt page">
     <script type="text/javascript" src="js/script.js"></script>
-    <link rel="stylesheet" type="text/css" href="css/style.css" title="wbgd">
-    <link rel="alternate stylesheet" type="text/css" href="css/dstyle.css" title="dbgd">
+<link rel="stylesheet" type="text/css" href="css/<?php echo (!$style)?'style':rtrim($style," ");?>.css" />
     <link rel="stylesheet" type="text/css" href="css/animate.css" title="animate">
 
 </head>

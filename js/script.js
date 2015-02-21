@@ -7,95 +7,14 @@
  */
 
  /*
-  * Function checkcookie and setcookie for background color under development
+  * Function to logout
  */ 
-  function checkCookie() {
-  /*
-      var cookie = getCookie("mkurshirt");
-  if  (cookie === "style") {
-      var col = 'style';
-      setCSS(col);
-  }
-  if (cookie === "dstyle") {
-      var col = 'dstyle';
-      setCSS(col);
-  }
-  if (cookie === "undefined"){
-var col = "style";
-setCSS(col);
-  return col; 
-	  }
-          */}
- 
- function setCookiechg(col) {
-    var d = new Date();
-	d.setTime(d.getTime() + (24*60*60*1000));
-    var expires = "expires="+d.toUTCString();
-		document.cookie = "mkurshirt" + "=" + col + "; " + expires;
-		} 
+  
+function logout(){
 
-  function getCookie(mkurshirt) {
-	var name = mkurshirt + "=";
-    var ca = document.cookie.split(';');
-    for(var i=0; i<ca.length; i++) {
-        var c = ca[i];
-        while (c.charAt(0)===' ') c = c.substring(1);
-        if (c.indexOf(name) === 0) return c.substring(name.length, c.length);
-    }
-    return "";
-}
-
-function setCSS(col) {
-    
-    /*
-    getCookie("mkurshirt");
-    if (str !== "style" & str !== "dstyle") {
-            var col = "style";
-        setCookiechg(col);}
-    else {
-	var actual = document.styleSheets;
-	for (i=0; i < actual.length; i++) {
-            if (actual[i].href === null){
-            }
-            else {
-	var str = actual[i].href;
-	var str = str.substring(str.lastIndexOf("."),str.lastIndexOf("/")+1);
-        alert(str);
-        if (str === col){
-			actual[i].disabled = false;
-			}
-	else actual[i].disabled = true;
-        setCookiechg(col);
-	}}	
-}*/
-    alert("Function under development");
-}
- 
-/*
-	 * Function to Change the default CSS stylesheed , by enabling/disabling the sheets.
- */
-
- 
- function changeCSS(col, cssLinkIndex) {
-	var actual = document.styleSheets;
-	for (i=0; i < actual.length; i++) {
-	var str = actual[i].href;
-	var str = str.substring(str.lastIndexOf("."),str.lastIndexOf("/"));
-	if (str === col) {
-			actual[i].disabled = true;
-			}
-	else actual[i].disabled = false;
-	}
-     if (col === "dstyle") {
-		var col = "style";
-   setCookiechg(col); }
-   
-        else {
-		var col = "dstyle";
-   setCookiechg(col);
-		
-		}
-            }
+document.cookie = 'MKUSHIRT'+ '=; expires=Thu, 01-Jan-70 00:00:01 GMT;';
+location.reload();
+}  
 /* 
 Use of title effect provided by https://github.com/jschr/textillate Fabien
  */
@@ -233,6 +152,5 @@ function checkpwd (){
         $("#pass1").css('background-color', '#D7F2E0');
         $("#pass2").css('background-color', '#D7F2E0');}
 }
-
 
 

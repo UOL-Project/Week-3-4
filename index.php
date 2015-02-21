@@ -7,6 +7,7 @@ Joao Paulo Henriques Remedio
 Kevin Gargo 
 -->
 <?php
+$style= '';
 include "getcookie.php";
 ?>
 <html>

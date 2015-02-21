@@ -11,7 +11,6 @@ $cookie = filter_input(INPUT_COOKIE, 'MKUSHIRT', FILTER_SANITIZE_STRING);
 if(!isset($cookie)) {
 } else {
     $values= explode(',', $cookie);
-    echo "<h3>Welcome back ".$values[1]."</h3><br>";
     $style= $values[0];
     $UID = $values[2];
     return;

@@ -13,7 +13,7 @@ and open the template in the editor.
     <!--
 Link to external documents
 -->
-<link rel="stylesheet" type="text/css" href="css/style.css">
+<link rel="stylesheet" type="text/css" href="css/style.css" />
 
     <!--
 JQuery is used for the slideshow and animated title part

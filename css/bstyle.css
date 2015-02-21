@@ -18,18 +18,22 @@ Kevin Gargo
 }
 
 body{
-    background-color: #f7f7f7;
-    color: #3b5998;
+    background-color: #8B9DC3;
+    color: #f7f7f7;
     font-family: Hatori Hanzo, Hatori Hanzo Light;
 }
 
+.main {
+       width: 100%;
+}
+
 p {
-   color: #3b5998; 
+   color: #f7f7f7; 
 }
 
 .tlt {
     text-align: center;
-    color: #3b5998;
+    color: #f7f7f7;
 }
 
 h2 {float: bottom;
@@ -46,7 +50,7 @@ Menu Design
     font-family: Hatori Henzo;
     text-decoration: none;
     font-size: x-large;
-    color: #8b9dc3;
+    color: #3b5998;
     float: left;
     width: auto;
     clear: both;
@@ -63,8 +67,8 @@ Menu Design
 .onclick-menu li a:hover {
     list-style: none;
     padding-left: 8px;
-    color: #3b5998;
-    text-shadow: 0 0 1px #3b5998;
+    color: #f7f7f7;
+    text-shadow: 0 0 1px #f7f7f7;
     font-size: xx-large;
 }
 
@@ -77,7 +81,7 @@ Menu Design
 .onclick-menu {
     position: relative;
     display: inline;
-    color: #3b5998;
+    color: #f7f7f7;
 
 }
 .onclick-menu:before {
@@ -109,19 +113,18 @@ Menu Design
 	 * Menu at the bottom of the page
 */
 .submenu {
-	float: bottom;
-        margin-left: 32%;
+    clear: both;
+    margin-left: 32%;
 	}
         
         ul.submenu li a {
-        color: #3b5998;
+        color: #f7f7f7;
         font-family: Hatori Hanzo, Hatori Hanzo Light;
         text-decoration: none;        
         }
 
 .submenu li{
 	display: inline-block;
-
         
 	}
 /* 
@@ -156,7 +159,7 @@ Table style - BY Joao
 .innertitle {
     font-size: 24px;
     font-weight: bold;
-    color: #3b5998
+    color: #f7f7f7
 }
 
 #tableteamleftcol {
@@ -199,7 +202,7 @@ ul {
 }
 
 .th2 {
-    color: #3b5998;
+    color: #f7f7f7;
     background-color: #dfe3ee;
     padding: 1em;
     border: 1px solid black
@@ -220,7 +223,7 @@ ul {
 }
 
 .fontcolor {
-    color: #3b5998
+    color: #f7f7f7
 }
 /* 
 Contact page form By Fabien
@@ -243,13 +246,14 @@ Contact page form By Fabien
     float: left;
     width: auto;
     margin-top: 1.5em;
+    clear: both;
 }
 
 .rightdiv {
     float: right;
-    width: auto;
-    margin: 5em 15em 0 0;
-    border: 1em outset #dfe3ee
+    width: 33%;
+    margin: 5em 25em 0 0;
+    
 }
 
 .rightdivform {
@@ -260,6 +264,15 @@ Contact page form By Fabien
 
 input[type="number"] {
     text-align: right;
+}
+
+/* 
+Iframe by Joao
+*/
+
+iframe {
+    width: 700px;
+    
 }
 
 #logosquare {
@@ -305,13 +318,15 @@ input[type="number"] {
     /* position: relative;
     top: 500px; */
     float: left;
-    width: 874px;
+    width: 702px;
+    padding: 0 2em;
     /* height: 375px;*/
     border: 1px solid darkblue;
     border-radius: 8px;
+    margin-bottom: 1em;
 }
 
-#logopage {
+#ul.logopage {
     float:left;
     height: 64px;
     padding-left: 5px;

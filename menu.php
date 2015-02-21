@@ -6,7 +6,11 @@
  * and open the template in the editor.
  */
 
+
+    
 if (isset($values)){
+        echo "<h4>Welcome back ".$values[1]."</h4><br>";
+        
  echo '<div tabindex="0" class="onclick-menu"><img src="./images/Menu-Icon-6.png" alt="menu item" class="menuimg">
     <nav class="onclick-menu-content">
         <ul>
@@ -16,6 +20,7 @@ if (isset($values)){
             <li><a href="about.php" class="menu">About Us</a></li>
             <li><a href="contact.php" class="menu">Contact</a></li>
             <li><a href="pref.php" class="menu">Preferences</a></li>
+            <li><a href="#" class="menu" onclick="logout()">Log out</a></li>
         </ul>
     </nav>
 </div>';}
@@ -34,4 +39,5 @@ else {
     </nav>
 </div>';}
    
+
 ?>
