@@ -55,42 +55,45 @@ include "getcookie.php";
 //retrieving the outcome of the SQL Query
             $result = $STH->FetchObject();
             $select = ($result->bgdpref);
-
+            $UID = $result->UID;
+            $name = $result->name;
+            $fname = $result->fname;
+            $email = $result->email;
+            
             echo '<div class="leftdiv">';
             echo '<form action="update.php" method="post">';
             echo '<table>';
             echo '<tr>';
-            echo '<td>User ID: </td>';
-            echo '<td class="tdb"><input type="text" name="UID" class="box" value=' . ($result->UID) . ' required="required"></td>';
+            echo '<td class="tdb"><input type="text" name="UID" class="box" value='.$UID.' required="required" hidden="hidden"></td>';
             echo '</tr>';
             echo '<tr>';
             echo '<td>Last Name: </td>';
-            echo '<td class="tdb"><input type="text" name="name" class="box" value=' . ($result->name) . ' required="required"></td>';
+            echo '<td class="tdb"><input type="text" name="name" class="box" value='.$name.' required="required"></td>';
             echo '</tr>';
             echo '<tr>';
             echo '<td>First Name: </td>';
-            echo '<td class="tdb"><input type="text" name="fname" class="box" value=' . ($result->fname) . ' required="required"></td>';
+            echo '<td class="tdb"><input type="text" name="fname" class="box" value='.$fname.' required="required"></td>';
             echo '</tr>';
             echo '<tr>';
             echo '<td>Email: </td>';
-            echo '<td class="tdb"><input type="email" name="email" class="box" value=' . ($result->email) . ' required="required"></td>';
+            echo '<td class="tdb"><input type="email" name="email" class="box" value='.$email.' required="required"></td>';
             echo '</tr>';
             echo '</table>';
             echo '<br>';
             echo '<p>Change your theme:</p>';
             echo '<select name="bgdpref">';
-            if ($select === "style") {
-                echo '<option value="style" selected="selected">White</option>';
-                echo '<option value="bstyle">Blue</option>';
-                echo '<option value="gstyle">Grey</option>';
-            } elseif ($select === "bstyle") {
-                echo '<option value="style">White</option>';
-                echo '<option value="bstyle" selected="selected">Blue</option>';
-                echo '<option value="gstyle">Grey</option>';
-            } elseif ($select === "gstyle") {
-                echo '<option value="style">White</option>';
-                echo '<option value="bstyle">Blue</option>';
-                echo '<option value="gstyle" selected="selected">Grey</option>';
+            if ($select === "white") {
+                echo '<option value="white" selected="selected">White</option>';
+                echo '<option value="blue">Blue</option>';
+                echo '<option value="grey">Grey</option>';
+            } elseif ($select === "blue") {
+                echo '<option value="white">White</option>';
+                echo '<option value="blue" selected="selected">Blue</option>';
+                echo '<option value="grey">Grey</option>';
+            } elseif ($select === "grey") {
+                echo '<option value="white">White</option>';
+                echo '<option value="blue">Blue</option>';
+                echo '<option value="grey" selected="selected">Grey</option>';
             }
             echo '</select>';
             echo '<br>';
@@ -101,7 +104,7 @@ include "getcookie.php";
             echo '<input type="reset">';
             echo '</form>';
             echo '<br><br>';
-            echo '<a href="chgpwd".php>Change your password</a>';
+            echo '<a href="chgpwd.php"><button>Change your Password</button></a> - <a href="del.php"><button>Delete your account</button></a>';
             echo '</div>';
             ?>
             <div>

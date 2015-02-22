@@ -32,17 +32,8 @@ include "getcookie.php";
 </div>
         
         <?php
-$servername = "laureatestudentserver.com";
-$username = "laureate_IN103";
-$password = "9ock4nyWV4XJ";
-$dbname = "laureate_IN103";
+include "connection/php";
 
-//Create connection
-$conn = new mysqli($servername, $username, $password, $dbname);
-//Check connection
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-} 
 
 // retrieve data from the form
 $shirtmodel = filter_input(INPUT_POST, 'shirtmodel', FILTER_SANITIZE_STRING);

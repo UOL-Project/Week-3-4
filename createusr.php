@@ -61,9 +61,9 @@ JQuery is used for the slideshow and animated title part
         Select your theme color
         <br><br>
         <select name="bgdpref">
-            <option selected="selected" value="style">White</option>
-            <option value="bstyle">Blue</option>
-            <option value="gstyle">Grey</option>
+            <option selected="selected" value="white">White</option>
+            <option value="blue">Blue</option>
+            <option value="grey">Grey</option>
         </select>
         <br>
         <br>

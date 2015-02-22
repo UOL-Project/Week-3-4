@@ -24,7 +24,7 @@ Link to external documents, with CSS sheet selected in function of Cookie conten
     //preparation of the SQL Query
     $STHCHK = $DBPDO->prepare('SELECT password FROM upref WHERE UID = :UID');
 //naming placeholder for statement handle
-    $STHCHK->bindParam(':UID', $UID);
+    $STHCHK->bindValue(':UID', $UID);
 
 //execution of the SQL Query and check if ID exists
     $STHCHK->execute();
@@ -41,14 +41,14 @@ Link to external documents, with CSS sheet selected in function of Cookie conten
             die;
         } else {
             //retrieving data from the form
-            $STH = $DBPDO->prepare('UPDATE upref SET UID = :UID, bgdpref = :bgdpref, name = :name, fname = :fname, email = :email  WHERE UID = :UID');
+           $STH = $DBPDO->prepare("UPDATE upref SET name = :name, fname = :fname, bgdpref = :bgdpref, email = :email WHERE UID = :UID ");
 
 //naming placeholder for statement handle
-            $STH->bindValue(':UID', $UID);
-            $STH->bindValue(':bgdpref', $bgdpref);
-            $STH->bindValue(':name', $name);
-            $STH->bindValue(':fname', $fname);
-            $STH->bindValue(':email', $email);
+            $STH->bindParam(':UID', $UID);
+            $STH->bindParam(':bgdpref', $bgdpref);
+            $STH->bindParam(':name', $name);
+            $STH->bindParam(':fname', $fname);
+           $STH->bindParam(':email', $email);
 //execute statement
             $STH->execute();
         }
@@ -59,7 +59,7 @@ Link to external documents, with CSS sheet selected in function of Cookie conten
             print_r($DBPDO->errorInfo());
         } else {
             echo '<p>Database has been updated successfully</p>';
-            header("Location:index.php");
+          //  header("Location:index.php");
         }
     }
     ?>

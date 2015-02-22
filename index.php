@@ -19,7 +19,7 @@ include "getcookie.php";
     <!--
 Link to external documents, with CSS sheet selected in function of Cookie content
 -->
-<link rel="stylesheet" type="text/css" href="css/<?php echo (!$style)?'style':rtrim($style," ");?>.css" />
+<link rel="stylesheet" type="text/css" href="css/<?php echo (!$style)?'white':rtrim($style," ");?>.css" />
 <link rel="stylesheet" type="text/css" href="css/animate.css" title="animate">
 
     <!--
