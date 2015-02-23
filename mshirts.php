@@ -23,7 +23,7 @@ include "getcookie.php";
 
 </head>
 
-<body id="bgdcolour" onload="checkCookie()">
+<body>
 
     <!-- Definition of the dynamic menu using the HTML <nav> tag and CSS
 -->

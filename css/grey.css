@@ -19,7 +19,7 @@ Kevin Gargo
 
 body{
     background-color: #a19c9c;
-    color: #3b5998;
+    color: #326ada;
     font-family: Hatori Hanzo, Hatori Hanzo Light;
 }
 
@@ -28,15 +28,20 @@ body{
 }
 
 p {
-   color: #3b5998; 
+   color: #326ada; 
 }
 
 .tlt {
     text-align: center;
-    color: #3b5998;
+    color: #326ada;
 }
 
 h2 {float: bottom;
+}
+
+h4 {clear: both;
+    float: left;
+    
 }
 /* 
 Menu Design
@@ -50,7 +55,7 @@ Menu Design
     font-family: Hatori Henzo;
     text-decoration: none;
     font-size: x-large;
-    color: #8b9dc3;
+    color: #d4d8d4;
     float: left;
     width: auto;
     clear: both;
@@ -67,8 +72,8 @@ Menu Design
 .onclick-menu li a:hover {
     list-style: none;
     padding-left: 8px;
-    color: #3b5998;
-    text-shadow: 0 0 1px #3b5998;
+    color: #326ada;
+    text-shadow: 0 0 1px #326ada;
     font-size: xx-large;
 }
 
@@ -81,11 +86,11 @@ Menu Design
 .onclick-menu {
     position: relative;
     display: inline;
-    color: #3b5998;
+    color: #326ada;
 
 }
 .onclick-menu:before {
-    color: #dfe3ee;
+    color: #d4d8d4;
 }
 .onclick-menu:focus {
     /* clicking on label should toggle the menu */
@@ -118,7 +123,7 @@ Menu Design
 	}
         
         ul.submenu li a {
-        color: #3b5998;
+        color: #326ada;
         font-family: Hatori Hanzo, Hatori Hanzo Light;
         text-decoration: none;        
         }
@@ -159,11 +164,11 @@ Table style - BY Joao
 .innertitle {
     font-size: 24px;
     font-weight: bold;
-    color: #3b5998
+    color: #326ada
 }
 
 #tableteamleftcol {
-    background-color: #dfe3ee;
+    background-color: #d4d8d4;
     width: 300px;
     text-align: center;
     font-size: 36px;
@@ -176,7 +181,7 @@ Table style - BY Joao
 
 thead {
     font-weight: bolder;
-    background-color: #dfe3ee;
+    background-color: #d4d8d4;
 }
 
 ul {
@@ -202,8 +207,8 @@ ul {
 }
 
 .th2 {
-    color: #3b5998;
-    background-color: #dfe3ee;
+    color: #326ada;
+    background-color: #d4d8d4;
     padding: 1em;
     border: 1px solid black
 }
@@ -223,7 +228,7 @@ ul {
 }
 
 .fontcolor {
-    color: #3b5998
+    color: #326ada
 }
 /* 
 Contact page form By Fabien
@@ -252,7 +257,7 @@ Contact page form By Fabien
     float: right;
     width: auto;
     margin: 5em 15em 0 0;
-    border: 1em outset #dfe3ee
+    border: 1em outset #d4d8d4
 }
 
 .rightdivform {

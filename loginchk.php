@@ -12,7 +12,7 @@
             
 
             $UID = filter_input(INPUT_POST, 'UID', FILTER_SANITIZE_STRING);
-$pass = filter_input(INPUT_POST, 'pass', FILTER_SANITIZE_STRING);
+            $pass = filter_input(INPUT_POST, 'pass', FILTER_SANITIZE_STRING);
             
 
 //preparation of the SQL Query
@@ -40,8 +40,6 @@ echo '<p>User ID does not exists, please try again or <a href="createusr.php">cr
             
         }
         else {
-      $fname = ($chckresult->fname);
-                          echo "<p>Succsessfull Logon, Welcome back ".$fname."</p>";
         $bgdpref = ($chckresult->bgdpref);
             include "setcookie.php";
             header("Location:index.php");

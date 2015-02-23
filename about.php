@@ -18,7 +18,7 @@ include "getcookie.php";
     <!--
 Link to external documents
 -->
-<link rel="stylesheet" type="text/css" href="css/<?php echo (!$style)?'style':rtrim($style," ");?>.css" />
+<link rel="stylesheet" type="text/css" href="css/<?php echo (!$style)?'white':rtrim($style," ");?>.css" />
 <link rel="stylesheet" type="text/css" href="css/animate.css" title="animate">
     <script type="text/javascript" src="js/script.js"></script>
 </head>
@@ -172,6 +172,7 @@ Link to external documents
                 <th class="th2">JavaScript</th>
 		<th class="th2">PHP</th>
 		<th class="th2">SQL</th>
+                <th class="th2">User Management</th>
             </tr>
             <tr class="tr2">
                 <td class="left">Fabien</td>
@@ -184,6 +185,7 @@ Link to external documents
                 <td class="td2">X</td>
                 <td class="td2">X</td>
 		<td class="td2">X</td>
+                <td class="td2">X</td>
                 <td class="td2">X</td>
             </tr>
             <tr class="tr2">
@@ -198,6 +200,7 @@ Link to external documents
                 <td class="td2"></td>
 		<td class="td2"></td>
                 <td class="td2"></td>
+                <td class="td2"></td>
             </tr>
             <tr class="tr2">
                 <td class="left">Joao</td>
@@ -211,6 +214,7 @@ Link to external documents
                 <td class="td2">X</td>
 		<td class="td2">X</td>
                 <td class="td2">X</td>
+                <td class="td2"></td>
             </tr>
         </table>
         	<div>

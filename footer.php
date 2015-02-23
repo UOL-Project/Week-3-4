@@ -17,6 +17,8 @@ echo '<nav>
             <li><a href="contact.php">Contact</a></li>
             <li>-</li>
             <li><a href="pref.php">Preferences</a></li>
+            <li>-</li>
+            <li><a href="index.php" class="menu" onclick="logout()">Log out</a></li>
         </ul>
     </nav>';}
 

@@ -56,7 +56,8 @@ else {
 
 else {
 echo '<p>User ID already exists, please select a new one</p>';
-    
+       echo '<br>';
+    echo '<a href=create.php>Back to user creation</a>';  
 }
 
 ?>

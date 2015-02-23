@@ -6,7 +6,7 @@
     <!--
 Link to external documents, with CSS sheet selected in function of Cookie content
     -->
-    <link rel="stylesheet" type="text/css" href="css/<?php echo (!$style) ? 'style.css' : rtrim($style, " "); ?>.css" />
+    <link rel="stylesheet" type="text/css" href="css/<?php echo (!$style) ? 'white.css' : rtrim($style, " "); ?>.css" />
     <link rel="stylesheet" type="text/css" href="css/animate.css" title="animate">
 </head>
 <body>
@@ -58,8 +58,11 @@ Link to external documents, with CSS sheet selected in function of Cookie conten
             echo "\nPDO::errorInfo():\n";
             print_r($DBPDO->errorInfo());
         } else {
-            echo '<p>Database has been updated successfully</p>';
-          //  header("Location:index.php");
+            echo '<script language="javascript">';
+            echo 'alert("Database has been updated successfully")';
+            echo '</script>';
+            include "setcookie.php";
+            header("Location:index.php");
         }
     }
     ?>

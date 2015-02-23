@@ -38,6 +38,11 @@ p {
 
 h2 {float: bottom;
 }
+
+h4 {clear: both;
+    float: left;
+    
+}
 /* 
 Menu Design
 */
