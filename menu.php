@@ -20,6 +20,7 @@ if (isset($values)){
             <li><a href="about.php" class="menu">About Us</a></li>
             <li><a href="contact.php" class="menu">Contact</a></li>
             <li><a href="pref.php" class="menu">Preferences</a></li>
+            <li><a href="orders.php" class="menu">View orders</a></li>
             <li><a href="index.php" class="menu" onclick="logout()">Log out</a></li>
         </ul>
     </nav>

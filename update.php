@@ -40,7 +40,7 @@ Link to external documents, with CSS sheet selected in function of Cookie conten
             echo '<p>Wrong password, <a href="pref.php">please try again</a></p>';
             die;
         } else {
-            //retrieving data from the form
+            //Update data 
            $STH = $DBPDO->prepare("UPDATE upref SET name = :name, fname = :fname, bgdpref = :bgdpref, email = :email WHERE UID = :UID ");
 
 //naming placeholder for statement handle

@@ -16,7 +16,7 @@ include "getcookie.php";
 <link rel="stylesheet" type="text/css" href="css/animate.css" title="animate">
     </head>
     
-<body id="bgdcolour" onload="checkCookie()" class="whitebgd">
+<body>
 <div class="fixed">
 <div tabindex="0" class="onclick-menu"><img src="./images/Menu-Icon-6.png" alt="menu item" class="menuimg">
     <nav class="onclick-menu-content">
@@ -32,7 +32,7 @@ include "getcookie.php";
 </div>
         
         <?php
-include "connection/php";
+include "connection.php";
 
 
 // retrieve data from the form
@@ -46,6 +46,7 @@ $txtpos = filter_input(INPUT_POST, 'txtpos', FILTER_SANITIZE_STRING);
 $logoyn = filter_input(INPUT_POST, 'logoyn', FILTER_SANITIZE_STRING);
 $time = date("d m o Y h:i:s A");
 $email = filter_input(INPUT_POST, 'email', FILTER_SANITIZE_EMAIL);
+$UID = ltrim($UID, " ");
 
 
 //Display order info
@@ -61,27 +62,39 @@ echo '<p> your email is: '. $email .'</p>';
 
 //Insert values into the db
 
-$sql = "INSERT INTO `laureate_IN103`.`orders` (shirts, colour, size, quantity, text, position, textcolour, logo, Dateorder, email)
-VALUES ('$shirtmodel', '$color', '$shirtsize', '$quantity', '$TextShirt', '$txtpos', '$textcolor', '$logoyn', '$time', '$email')";
+           $STH = $DBPDO->prepare('INSERT INTO orders (shirts, colour, size, quantity, text, position, textcolour, logo, Dateorder, email, UID)
+VALUES (:shirtmodel, :color, :shirtsize, :quantity, :TextShirt, :txtpos, :textcolor, :logoyn, :time, :email, :UID)');
+
+//naming placeholder for statement handle
+            $STH->bindParam(':shirtmodel', $shirtmodel);
+            $STH->bindParam(':color', $color);
+            $STH->bindParam(':shirtsize', $shirtsize);
+            $STH->bindParam(':quantity', $quantity);
+            $STH->bindParam(':TextShirt', $TextShirt);
+            $STH->bindParam(':txtpos', $txtpos);
+            $STH->bindParam(':textcolor', $textcolor);
+            $STH->bindParam(':logoyn', $logoyn);
+            $STH->bindParam(':time', $time);
+            $STH->bindParam(':email', $email);
+            $STH->bindParam(':UID', $UID);
+//execute statement
+            $STH->execute();
+
 
 
 //Check if the insert was ok
-if ($conn->query($sql) === TRUE) {
-
-} else {
-    echo "Error: " . $sql . "<br>" . $conn->error;
-}
+      if (!$STH) {
+            echo "\nPDO::errorInfo():\n";
+            print_r($DBPDO->errorInfo());
+        } else {
+        
 
 //retrieve last order passed
-$sqlid = 'SELECT id FROM `laureate_IN103`.`orders` ORDER BY id DESC LIMIT 1;';
-$rowid = $conn->query($sqlid);
-if ($rowid->num_rows > 0) {
-    // output data of each row
-    while($lastid = $rowid->fetch_assoc()) {
-        $id = $lastid["id"];
-}}
+$STHID = $DBPDO->prepare('SELECT id FROM `laureate_IN103`.`orders` ORDER BY id DESC LIMIT 1;', array(PDO::ATTR_CURSOR => PDO::CURSOR_SCROLL));
+$id = $DBPDO->lastInsertId();
+$STHID->execute();
+
 echo "Your command number is: " . $id . '<br>';
-$conn->close();
 
 //Send confirmation email
  $to = $email;
@@ -100,7 +113,7 @@ $conn->close();
    else
    {
       echo "Message could not be sent...";
-   }
+        }}
 
 ?>
     	<div>

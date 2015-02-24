@@ -12,23 +12,13 @@ include "getcookie.php";
     <head>
         <meta charset="UTF-8">
         <title>UOL - Make U'R shirt - Shopping Cart</title>
-<link rel="stylesheet" type="text/css" href="css/<?php echo (!$style)?'style':rtrim($style," ");?>.css" />
+<link rel="stylesheet" type="text/css" href="css/<?php echo (!$style)?'white':rtrim($style," ");?>.css" />
 <link rel="stylesheet" type="text/css" href="css/animate.css" title="animate">
     </head>
-<body id="bgdcolour" onload="setCSS()" class="whitebgd">
+<body>
     
 <div class="fixed">
-<div tabindex="0" class="onclick-menu"><img src="images/Menu-Icon-6.png" alt="menu item" class="menuimg">
-    <nav class="onclick-menu-content">
-        <ul>
-            <li><a href="index.html" class="menu">Home</a></li>
-            <li><a href="mshirts.html" class="menu">Men Shirts</a></li>
-            <li><a href="wshirts.html" class="menu">Women Shirts</a></li>
-            <li><a href="about.html" class="menu">About Us</a></li>
-            <li><a href="contact.html" class="menu">Contact</a></li>
-            <li><a href="#" class="menu" onclick="setCookiechg()">Change site color</a></li>
-        </ul>
-    </nav>
+<?php include "menu.php" ?>
 </div>
 </div>
     <div class="leftdiv">
