@@ -62,25 +62,25 @@ Link to external documents
                         </li>
                     </ul>
                     <br> All the images present on this website are royalty free and can be confirmed on the
-                    <a href="about.html#ref">References</a> table.
+                    <a href="about.php#ref">References</a> table.
                     <br>
                     <br>
                     <strong>Fabien Huraux</strong>
                     <br> The team leader. He is responsible for the
-                    <a href="index.html">Home</a> page and defining the main style to be used through the website.
+                    <a href="index.php">Home</a> page and defining the main style to be used through the website.
                     <br> He lives in the north-east of France, close to the Belgium, German and Luxembourgish border. He crosses the frontier with the Luxembourg on a daily basis, where he works for an European clearing and settlement house as information system auditor. His main activities are reviewing the processes and systems used within the group and assess any related risks.
                     <br> He holds the CISA, CISM and CISSP certifications, which are essentially related to IS governance.
                     <br>
                     <br>
                     <strong>Joao Remedio</strong>
-                    <br> Responsible for the <a href="about.html">About us</a> page and getting the images.
+                    <br> Responsible for the <a href="about.php">About us</a> page and getting the images.
                     <br> He lives in Geneva, Switzerland and he's original from Lisbon, Portugal. He works as a system administrator at the United Nations for about the last three years, mostly managing Active Directory and Windows systems. Back in Portugal he was doing implementation of different Microsoft technologies, like Active Directory, Exchange, SQL, TMG, Lync, etc.
                     <br> He holds the MCSE, MCSA, MCITP (SQL, Exchange, Lync) certifications.
                     <br>
                     <br>
                     <strong>Kevin Gargo</strong>
                     <br> Responsible for the
-                    <a href="contact.html">Contact us</a> page.
+                    <a href="contact.php">Contact us</a> page.
                     <br> He works as a server systems administrator with the United Nations Multidimensional Integrated Stabilization mission in the Central African Republic (MINUSCA).
                     <br> With 12 years’ experience as a Server Systems Engineer, he is specialized in Server systems consolidation (Virtualization), Storage Area Networks (SAN) and Disaster Recovery and Business Continuity (DRBC) technologies, he served as a systems engineer with the United Nations for 7 years and during this period, I contributed in providing technical guidance on complex storage systems and also participated in the installation and configuration of three (3) tiers of enterprise storage backup solution for the Disaster Recovery and Business Continuity (DRBC) project in Entebbe Regional Support Center (RSCE), Uganda to support UN peacekeeping missions in the African region.
                     <br> He holds the MCSE and Hewlett Packard’s (HP) Blade Servers and Storage systems certifications.
