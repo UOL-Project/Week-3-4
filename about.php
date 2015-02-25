@@ -108,20 +108,13 @@ Link to external documents
 
                 <!-- Code references -->
                <?php
-               // MySQL Connection variables
-                $dbserver = "laureatestudentserver.com";
-                $dbname = "laureate_IN103";
-                $username = "laureate_IN103";
-                $password = "9ock4nyWV4XJ";
-                //$port = 3306;
-                //$socket = "";
-                
-                // Creating the database connection
-                //$dbc = mysqli_connect($dbserver,$username,$password,$dbname,$port,$socket);
-		$dbc = mysqli_connect($dbserver,$username,$password,$dbname);                
+               
+                // MySQL database connection
+                include 'connection.php';
+         
 
                 // testing the database connection
-                if (!$dbc) {
+                if (!$DBPDO) {
                     die("Connection failed: " . mysqli_connect_error());
                 }
                 
@@ -129,7 +122,7 @@ Link to external documents
                 $query = "SELECT teammember, item, harvardref FROM treferences ORDER BY teammember, item";
                 
                 // passing the database records into a variable
-                $results = $dbc->query($query);
+                $results = $DBPDO->query($query);
                 
                 // counting the number of records returned; in this case it is only for redundancy
                 $rows = mysqli_num_rows($results);
@@ -149,7 +142,8 @@ Link to external documents
                 </tr>
                 <?php endforeach;
                 }
-                $dbc = null;?>
+                // Closing the database connection
+                !$DBPDO = null;?>
             </tbody>
         </table>
     </div>
