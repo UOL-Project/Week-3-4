@@ -101,7 +101,7 @@ function fncategory(menuid){
     }
 
     /* apply the custom syle for a selected tab */
-    var logourl = "category/" + menuid + ".hml";
+    var logourl = "category/" + menuid + ".html";
     document.getElementById(menuid).className = "logobaractive";
     document.getElementById("catframe").src = logourl;
 }
